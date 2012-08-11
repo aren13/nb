@@ -1,4 +1,11 @@
 *.log
 *.pot
 *.pyc
+*.zip
+*~
+*.db
+*.swp
+site_media/*
 local_settings.py
+static/*
+
