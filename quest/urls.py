@@ -1,6 +1,10 @@
 from django.conf.urls.defaults import patterns, include
 
 urlpatterns = patterns( 'quest.views', 
+	(r'^macera/yeni/$', 'quest_add', {}, 'quest_add'),
+	(r'^maceralar/$', 'quest_list', {}, 'quest_list'),
+	(r'^maceralar/(?P<id>\d+)/$', 'quest', {}, 'quest'),
+	(r'^leaderboard/$', 'leaderboard', {}, 'leaderboard'),
 #	('^/?$', 'home', {}, 'website-home'),
 #	(r'^accounts/', include('registration.urls')),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/$', 'UserProfileView', {}, 'website-profile-view'),

@@ -102,7 +102,7 @@ class Quest(models.Model):
 		ordering = ['-date']
 
 	creator = models.ForeignKey(User, verbose_name="Oluşturan", related_name="oluşturan")
-	competitors = models.ManyToManyField(User, verbose_name="Tamamlayanlar", related_name="tamamlayanlar") 
+	competitors = models.ManyToManyField(User, verbose_name="Tamamlayanlar", related_name="tamamlayanlar", null=True, blank=True) 
 	status = models.BooleanField(verbose_name="Yayınlanma durumu" , default=False)
 	photo = models.ImageField(verbose_name="Tahlil", upload_to =quest_file_upload_to)
 	title = models.CharField(verbose_name="Başlık", max_length=120)
@@ -112,7 +112,7 @@ class Quest(models.Model):
 	difficulty = models.IntegerField(verbose_name="Zorluk", null=True, blank=True, choices=DEGREE)
 #	keywords  = Tag olayı
 	shareOnFacebook = models.BooleanField(verbose_name="Facebook'ta paylaş" , default=True)
-	point = models.IntegerField(verbose_name="Puan", null=True, blank=True,)
+	point = models.IntegerField(verbose_name="Puan", null=True, blank=True)
 	date = models.DateField(verbose_name="Tarih")
 
 	def photoName(self):

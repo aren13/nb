@@ -1,7 +1,10 @@
 from django.conf.urls.defaults import patterns, include
 
 urlpatterns = patterns( 'website.views', 
-	('^/?$', 'home', {}, 'website-home'),
+	('^/?$', 'home', {}, 'home'),
+	('^/?$', 'about', {}, 'about'),
+	('^/?$', 'faq', {}, 'faq'),
+	('^/?$', 'help', {}, 'help'),
 #	(r'^accounts/', include('registration.urls')),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/$', 'UserProfileView', {}, 'website-profile-view'),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/personal-info/$', 'personal_info', {}, 'website-profile-personal-info'),
