@@ -1,0 +1,63 @@
+<style type="text/css">
+div.background {
+position:absolute;
+left:0px;
+top:0px;
+z-index:-1;
+}
+div.background img {
+position:fixed;
+list-style: none;
+left:0px;
+top:0px;
+}
+div.background ul li.show {
+z-index:500
+}
+div.background {	position:absolute;	left:0px;	top:0px;	z-index:-1;}div.background img {	position:fixed;	list-style: none;	left:0px;	top:0px;}div.background ul li.show { z-index:500}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript">
+function thebackground() {
+$('div.background img').css({opacity: 0.0});
+$('div.background img:first').css({opacity: 1.0});
+setInterval('change()',5000);
+}
+function change() {
+var current = ($('div.background img.show')? $('div.background img.show') : $('div.background img:first'));
+if ( current.length == 0 ) current = $('div.background img:first');
+var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.background img:first') :current.next()) : $('div.background img:first'));
+next.css({opacity: 0.0})
+.addClass('show')
+.animate({opacity: 1.0}, 1000);
+current.animate({opacity: 0.0}, 1000)
+.removeClass('show');
+};
+$(document).ready(function() {
+thebackground();
+$('div.background').fadeIn(1000); // works for all the browsers other than IE
+$('div.background img').fadeIn(1000); // IE tweak
+});
+</script>
+
+
+
+<div class="background"><img src="{{ STATIC_URL }}1.jpg" width="1400" height="819" alt="pic1" /><img src="{{ STATIC_URL }}2.jpg" width="1401" height="934" alt="pic2" /><img src="{{ STATIC_URL }}3.jpg" width="1400" height="934" alt="pic3" /></div>
+
+
+
+
+<div id="welcomer">
+
+<!-- 	<div id="logo"></div>
+
+	<div id="rotator">
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/340_original.JPG?1344025102) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+	</div> -->
+	
+	<div id="message" align="center">
+		<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
+		<p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
+		<a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span>or</span> <a href="/quests" class="btn large danger pinkinfo">Maceralara Gözat</a>
+	</div>
+</div>
