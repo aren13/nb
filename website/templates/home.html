@@ -1,11 +1,137 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:fb="https://www.facebook.com/2008/fbml">
+
 <head>
+	<title>Neyi Bekliyorsun</title>
+  <meta content="authenticity_token" name="csrf-param" />
+	
+	<link href="{{ STATIC_URL }}nb.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="{{ STATIC_URL }}jquery.js" type="text/javascript"></script>
+  
+<!-- start Mixpanel -->
+<script type="text/javascript">
+var mpq=[];mpq.push(["init","5dd27419e2352eb0c2f25bdd3f82c0ca"]);(function(){var b,a,e,d,c;b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=(document.location.protocol==="https:"?"https:":"http:")+"//api.mixpanel.com/site_media/js/api/mixpanel.js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);e=function(f){return function(){mpq.push([f].concat(Array.prototype.slice.call(arguments,0)))}};d=["init","track","track_links","track_forms","register","register_once","identify","name_tag","set_config"];for(c=0;c<d.length;c++){mpq[d[c]]=e(d[c])}})();
+</script>
+<!-- end Mixpanel -->
+	<meta property="fb:app_id" content="249368738465388">
+	<meta property="og:title" content="Rambler - Find the coolest things to do while traveling the world"/> 
+	<meta property="og:image" content="http://ramblerhq.com/assets/logo-square.png" /> 
+	<meta property="og:site_name" content="Rambler"/> 
+	<meta property="fb:admins" content="12108070"/> 
+	<meta property="og:description" content=" Find the coolest things to do while traveling the world"/>
 </head>
 
 <body>
-Hello World.
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=249368738465388";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<header>
+	<span class="growl-notice"></span>
+
+	
+	
+	<div id="shakes" class="topbar" data-dropdown="dropdown">	
+		<div class="topbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li class="home"><a href="/"><img alt="Home" src="{{ STATIC_URL }}home.png" /></a></li>
+					<li><a href="/quests">Find Quests</a></li>
+					<li><a href="/quests/new" action="new">Suggest New Quest</a></li>
+					<li><a href="/rankings">Leaderboard</a></li>
+					<li><a href="/activity">Activity</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle">Help</a>
+						<ul class="dropdown-menu">
+							<li><a href="/about">About</a></li>
+							<li><a href="/faq">FAQ</a></li>
+							<li><a href="/help">Help</a>
+						</ul>
+					</li>
+				</ul>
+					<div class="login">
+						<a href="#" class="fb-auth btn">Login</a>
+					</div>
+			</div>
+		</div>
+	</div><!-- /topbar -->
+		
+	</div>
+</header>
+
+
+
+<style type="text/css">
+.preload {
+  background-image: url(http://s3.amazonaws.com/rambler-production/questimages/340_original.JPG?1344025102)url(http://s3.amazonaws.com/rambler-production/questimages/338_original.JPG?1343188590)url(http://s3.amazonaws.com/rambler-production/questimages/330_original.jpg?1341980980)url(http://s3.amazonaws.com/rambler-production/questimages/308_original.jpg?1341330230)url(http://s3.amazonaws.com/rambler-production/questimages/305_original.jpg?1341288566)url(http://s3.amazonaws.com/rambler-production/questimages/303_original.JPG?1340700326)url(http://s3.amazonaws.com/rambler-production/questimages/284_original.jpeg?1336924177)url(http://s3.amazonaws.com/rambler-production/questimages/282_original.JPG?1336784441)url(http://s3.amazonaws.com/rambler-production/questimages/272_original.jpg?1335756121)url(http://s3.amazonaws.com/rambler-production/questimages/260_original.jpg?1335522444)url(http://s3.amazonaws.com/rambler-production/questimages/225_original.JPG?1334113559)url(http://s3.amazonaws.com/rambler-production/questimages/219_original.jpg?1334111791)url(http://s3.amazonaws.com/rambler-production/questimages/195_original.JPG?1333035087)url(http://s3.amazonaws.com/rambler-production/questimages/192_original.jpg?1332977113)url(http://s3.amazonaws.com/rambler-production/questimages/183_original.JPG?1332946460)url(http://s3.amazonaws.com/rambler-production/questimages/160_original.JPG?1329260485)url(http://s3.amazonaws.com/rambler-production/questimages/140_original.JPG?1327884522)url(http://s3.amazonaws.com/rambler-production/questimages/89_original.jpg?1327605990)url(http://s3.amazonaws.com/rambler-production/questimages/86_original.jpg?1327552524)url(http://s3.amazonaws.com/rambler-production/questimages/83_original.JPG?1327413742)url(http://s3.amazonaws.com/rambler-production/questimages/71_original.jpg?1327362205)url(http://s3.amazonaws.com/rambler-production/questimages/57_original.JPG?1327356057)url(http://s3.amazonaws.com/rambler-production/questimages/19_original.jpg?1327304816)url(http://s3.amazonaws.com/rambler-production/questimages/17_original.jpg?1327304580)url(http://s3.amazonaws.com/rambler-production/questimages/1_original.jpg?1327255780);
+  background-position: -9999px -9999px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 1px; 
+}
+</style>
+
+<div id="welcomer">
+
+	<div id="logo"></div>
+
+	<div id="rotator">
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/340_original.JPG?1344025102) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/338_original.JPG?1343188590) center center no-repeat; background-size: cover;"><span>Quest: Ride an elephant (India)<div>Earn 65 points</div> <a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/330_original.jpg?1341980980) center center no-repeat; background-size: cover;"><span>Quest: Shark dive (Bahamas)<div>Earn 68 points</div> <a href="/quests/bahamas-shark-dive" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/308_original.jpg?1341330230) center center no-repeat; background-size: cover;"><span>Quest: Strike a Pose for the Paparazzi (Slovakia)<div>Earn 26 points</div> <a href="/quests/slovakia-strike-a-pose-for-the-paparazzi" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/305_original.jpg?1341288566) center center no-repeat; background-size: cover;"><span>Quest: Pet the Great White (Mexico)<div>Earn 92 points</div> <a href="/quests/mexico-pet-the-great-white" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/303_original.JPG?1340700326) center center no-repeat; background-size: cover;"><span>Quest: Oversee the jungle from the top of magic Mayan archeological remain  (Guatemala)<div>Earn 49 points</div> <a href="/quests/guatemala-oversee-the-jungle-from-the-top-of-magic-mayan-archeological-remain" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/284_original.jpeg?1336924177) center center no-repeat; background-size: cover;"><span>Quest: Go volcano boarding (Nicaragua)<div>Earn 87 points</div> <a href="/quests/nicaragua-go-volcano-boarding" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/282_original.JPG?1336784441) center center no-repeat; background-size: cover;"><span>Quest: Go swimming with sea lions at Palomino Island (Peru)<div>Earn 72 points</div> <a href="/quests/peru-go-swimming-with-sea-lions-at-palomino-island" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/272_original.jpg?1335756121) center center no-repeat; background-size: cover;"><span>Quest: Have a drink at The Croft Institute, Melbourne's hardest to find bar (Australia)<div>Earn 57 points</div> <a href="/quests/australia-have-a-drink-at-the-croft-institute-melbourne-s-hardest-to-find-bar" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/260_original.jpg?1335522444) center center no-repeat; background-size: cover;"><span>Quest: 18'000 feet Skydive in Franz Josef (New Zealand)<div>Earn 81 points</div> <a href="/quests/new-zealand-18-000-feet-skydive-in-franz-josef" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/225_original.JPG?1334113559) center center no-repeat; background-size: cover;"><span>Quest: Find some air-conditioners (Singapore)<div>Earn 44 points</div> <a href="/quests/singapore-find-some-air-conditioners" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/219_original.jpg?1334111791) center center no-repeat; background-size: cover;"><span>Quest: Get Hit by the sun in Sahara (Morocco)<div>Earn 51 points</div> <a href="/quests/morocco-get-hit-by-the-sun-in-sahara" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/195_original.JPG?1333035087) center center no-repeat; background-size: cover;"><span>Quest: Attend the La Bomba del Tiempo drum show in Buenos Aires (Argentina)<div>Earn 52 points</div> <a href="/quests/argentina-attend-the-la-bomba-del-tiempo-drum-show-in-buenos-aires" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/192_original.jpg?1332977113) center center no-repeat; background-size: cover;"><span>Quest: Tandem Surf in Hawaii (United States)<div>Earn 78 points</div> <a href="/quests/united-states-tandem-surf-in-hawaii" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/183_original.JPG?1332946460) center center no-repeat; background-size: cover;"><span>Quest: Stand on top of an active volcano (Nicaragua)<div>Earn 65 points</div> <a href="/quests/nicaragua-stand-on-top-of-an-active-volcano" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/160_original.JPG?1329260485) center center no-repeat; background-size: cover;"><span>Quest: Tame Gullfoss (Iceland)<div>Earn 25 points</div> <a href="/quests/iceland-tame-gullfoss" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/140_original.JPG?1327884522) center center no-repeat; background-size: cover;"><span>Quest: Pet a Lion in Zimbabwe (Zimbabwe)<div>Earn 64 points</div> <a href="/quests/zimbabwe-pet-a-lion-in-zimbabwe" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/89_original.jpg?1327605990) center center no-repeat; background-size: cover;"><span>Quest: Meet a Monkey in the Market at Marrakech (Morocco)<div>Earn 65 points</div> <a href="/quests/morocco-meet-a-monkey-in-the-market-at-marrakech" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/86_original.jpg?1327552524) center center no-repeat; background-size: cover;"><span>Quest: Find a fiery sunset in the land of fire and ice  (Iceland)<div>Earn 41 points</div> <a href="/quests/iceland-find-a-fiery-sunset-in-the-land-of-fire-and-ice" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/83_original.JPG?1327413742) center center no-repeat; background-size: cover;"><span>Quest: Cool down the fun way (Croatia)<div>Earn 29 points</div> <a href="/quests/croatia-cool-down-the-fun-way" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/71_original.jpg?1327362205) center center no-repeat; background-size: cover;"><span>Quest: Find &quot;moss world&quot; on the south coast (Iceland)<div>Earn 67 points</div> <a href="/quests/iceland-find-moss-world-on-the-south-coast" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/57_original.JPG?1327356057) center center no-repeat; background-size: cover;"><span>Quest: Pet a Tiger (Thailand)<div>Earn 74 points</div> <a href="/quests/thailand-pet-a-tiger" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/19_original.jpg?1327304816) center center no-repeat; background-size: cover;"><span>Quest: Go sandboarding! (Chile)<div>Earn 71 points</div> <a href="/quests/chile-go-sandboarding" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/17_original.jpg?1327304580) center center no-repeat; background-size: cover;"><span>Quest: Traverse down a waterfall (Colombia)<div>Earn 81 points</div> <a href="/quests/colombia-traverse-down-a-waterfall" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/1_original.jpg?1327255780) center center no-repeat; background-size: cover;"><span>Quest: Find a &quot;hobbit house&quot; in the countryside (Iceland)<div>Earn 65 points</div> <a href="/quests/iceland-find-a-hobbit-house-in-the-countryside" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+	</div>
+
+	<div id="message" align="center">
+		<h1>Welcome to Rambler</h1>
+		<p>Rambler is a worldwide scavenger hunt for travelers, by travelers. Find the coolest things to do in countries across the globe, earn points by completing quests and create unforgettable experiences.</p>
+		<a href="#" class="fb-auth sign-up-btn btn large danger">Join Now via Facebook</a> <span>or</span> <a href="/quests" class="btn large primary pinkinfo">Check out some quests</a>
+	</div>
+
+</div>
+
+<script type="text/javascript">		
+	$(document).ready(function(){ $('#rotator').jshowoff({
+		links: false,
+		cssClass: 'false',
+		hoverPause: false,
+		changeSpeed: 700,
+		speed: 7000
+	}); });
+</script>
+
+<div id="shadow"></div>
+
 </body>
 
-
-
 </html>
+
