@@ -1,11 +1,11 @@
 /*topbar background color*/
 .topbar-inner, .topbar .fill {
-    background-color: #000010;
+    background-color: #1D1F14;
 }
 
 /*topbar text color*/
 .topbar div>ul a, .nav a {
-    color: #7CF048
+    color: #C4D9BF
 }
 
 /*topbar text color active*/
@@ -17,15 +17,15 @@
 .btn {
     cursor: pointer;
     display: inline-block;
-	background-color: #2C3F59;
+	background-color: #888A80;
     background-repeat: repeat-x;
-  	background-image: -khtml-gradient(linear, left top, left bottom, from(#0F2440), to(#2C3F59));
-    background-image: -moz-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -ms-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0F2440), color-stop(100%, #2C3F59));
-    background-image: -webkit-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -o-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: linear-gradient(top, #0F2440, #2C3F59);
+  	background-image: -khtml-gradient(linear, left top, left bottom, from(#ABA898), to(#888A80));
+    background-image: -moz-linear-gradient(top, #ABA898, #888A80);
+    background-image: -ms-linear-gradient(top, #ABA898, #888A80);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ABA898), color-stop(100%, #888A80));
+    background-image: -webkit-linear-gradient(top, #ABA898, #888A80);
+    background-image: -o-linear-gradient(top, #ABA898, #888A80);
+    background-image: linear-gradient(top, #ABA898, #888A80);
     padding: 5px 14px 6px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     color: #333;
@@ -52,7 +52,7 @@
 }
 
 .topbar .login a {
-    color: #ffffff
+    color: #1D1F14
 }
 
 .btn.danger, .alert-message.danger, .btn.error, .alert-message.error, .primary {
@@ -3463,59 +3463,6 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 
 
 
-a.jshowoff-next {
-    right: 2%;
-    width: 53px;
-    height: 100px;
-    display: block;
-    background: url(arrows2.png) 0 0 no-repeat;
-    background: url(arrows3.png) 0 0 no-repeat;
-    text-indent: -999em;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    z-index: 10000;
-    opacity: 0.7;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: all 0.12s ease-in-out;
-    -moz-transition: all 0.12s ease-in-out;
-    -o-transition: all 0.12s ease-in-out;
-    -ms-transition: all 0.12s ease-in-out
-}
-
-a.jshowoff-next:hover {
-    opacity: 0.45;
-    margin-right: -7px !important;
-    width: 60px !important;
-    background-position: 100% 0
-}
-
-a.jshowoff-prev {
-    left: 2%;
-    background-position: 0 -100px !important;
-    width: 53px;
-    height: 100px;
-    display: block;
-    background: url(arrows2.png) 0 0 no-repeat;
-    background: url(arrows3.png) 0 0 no-repeat;
-    text-indent: -999em;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    z-index: 10000;
-    opacity: 0.7;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: all 0.12s ease-in-out;
-    -moz-transition: all 0.12s ease-in-out;
-    -o-transition: all 0.12s ease-in-out;
-    -ms-transition: all 0.12s ease-in-out
-}
-
-a.jshowoff-prev:hover {
-    opacity: 0.4;
-    margin-left: -7px !important;
-    padding-left: 7px !important
-}
 
 .jshowoff-play {
     display: none

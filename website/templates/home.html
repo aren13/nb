@@ -1,61 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <style type="text/css">
-div.background {
-position:absolute;
-left:0px;
-top:0px;
-z-index:-1;
+.preload {
+  background-image: url({{ STATIC_URL }}1.jpg)url({{ STATIC_URL }}2.jpg);
+  background-position: -9999px -9999px;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 1px; 
 }
-div.background img {
-position:fixed;
-list-style: none;
-left:0px;
-top:0px;
-}
-div.background ul li.show {
-z-index:500
-}
-div.background {	position:absolute;	left:0px;	top:0px;	z-index:-1;}div.background img {	position:fixed;	list-style: none;	left:0px;	top:0px;}div.background ul li.show { z-index:500}
 </style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-<script type="text/javascript">
-function thebackground() {
-$('div.background img').css({opacity: 0.0});
-$('div.background img:first').css({opacity: 1.0});
-setInterval('change()',5000);
-}
-function change() {
-var current = ($('div.background img.show')? $('div.background img.show') : $('div.background img:first'));
-if ( current.length == 0 ) current = $('div.background img:first');
-var next = ((current.next().length) ? ((current.next().hasClass('show')) ? $('div.background img:first') :current.next()) : $('div.background img:first'));
-next.css({opacity: 0.0})
-.addClass('show')
-.animate({opacity: 1.0}, 1000);
-current.animate({opacity: 0.0}, 1000)
-.removeClass('show');
-};
-$(document).ready(function() {
-thebackground();
-$('div.background').fadeIn(1000); // works for all the browsers other than IE
-$('div.background img').fadeIn(1000); // IE tweak
-});
-</script>
-
-
-
-<div class="background"><img src="{{ STATIC_URL }}1.jpg" width="1400" height="819" alt="pic1" /><img src="{{ STATIC_URL }}2.jpg" width="1401" height="934" alt="pic2" /><img src="{{ STATIC_URL }}3.jpg" width="1400" height="934" alt="pic3" /></div>
-
-
-
 
 <div id="welcomer">
 
-<!-- 	<div id="logo"></div>
-
+	<div id="logo"></div>
 	<div id="rotator">
-		<div style="background: url(http://s3.amazonaws.com/rambler-production/questimages/340_original.JPG?1344025102) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
-	</div> -->
+	<div id="features">
+		
+		<div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+		<div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;"><span>Quest: Ride an elephant (India)<div>Earn 65 points</div> <a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+
+	</div>
+	</div>
 	
 	<div id="message" align="center">
 		<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
@@ -63,4 +32,7 @@ $('div.background img').fadeIn(1000); // IE tweak
 		<a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span>or</span> <a href="/quests" class="btn large danger pinkinfo">Maceralara Gözat</a>
 	</div>
 </div>
+<script type="text/javascript">		
+	$(document).ready(function(){ $('#features').jshowoff({ speed:5000, links: false }); });
+	</script>
 {% endblock %}
