@@ -98,6 +98,17 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+	'django_facebook.context_processors.facebook',
+	'django.contrib.auth.context_processors.auth',
+	'django.core.context_processors.debug',
+	'django.core.context_processors.i18n',
+	'django.core.context_processors.media',
+	'django.core.context_processors.static',
+	'django.core.context_processors.tz',
+	'django.contrib.messages.context_processors.messages',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -107,6 +118,14 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'nb.urls'
+
+FACEBOOK_APP_ID = '194184377323648'
+FACEBOOK_APP_SECRET = '3dfa3c6af0abcc65c328ecdb9238f285'
+FACEBOOK_STORE_LIKES = True
+FACEBOOK_STORE_FRIENDS = True
+#FACEBOOK_LOGIN_DEFAULT_REDIRECT = 'http://localhost:8000/facebook/connect/'
+#FACEBOOK_LOGIN_DEFAULT_REDIRECT = '/facebook/connect/'
+
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -128,10 +147,22 @@ INSTALLED_APPS = (
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
      'django.contrib.admindocs',
+    # packages 
+     'django_facebook',
+#     'registration', #Later,
 )
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = (
+	'django.contrib.auth.backends.ModelBackend',
+	'django_facebook.auth_backends.FacebookBackend',
+)
 
 AUTH_PROFILE_MODULE = 'account.UserProfile'
+
+ACCOUNT_ACTIVATION_DAYS = 10
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
