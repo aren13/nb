@@ -1,31 +1,32 @@
 /*topbar background color*/
 .topbar-inner, .topbar .fill {
-    background-color: #1D1F14;
+    background-color: #373e2b;
 }
 
 /*topbar text color*/
 .topbar div>ul a, .nav a {
-    color: #C4D9BF
+    color: #E9E9E9
 }
 
 /*topbar text color active*/
-.topbar div>ul .active>a, .nav .active>a {
-    background-color: #7CF048;
-    background-color: rgba(0, 0, 0, 0.5)
+
+.topbar div>ul a:hover, .nav a:hover {
+    color: #8AA8B0;
+    text-decoration: none
 }
 
 .btn {
     cursor: pointer;
     display: inline-block;
-	background-color: #888A80;
+	background-color: #E84400;
     background-repeat: repeat-x;
-  	background-image: -khtml-gradient(linear, left top, left bottom, from(#ABA898), to(#888A80));
-    background-image: -moz-linear-gradient(top, #ABA898, #888A80);
-    background-image: -ms-linear-gradient(top, #ABA898, #888A80);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ABA898), color-stop(100%, #888A80));
-    background-image: -webkit-linear-gradient(top, #ABA898, #888A80);
-    background-image: -o-linear-gradient(top, #ABA898, #888A80);
-    background-image: linear-gradient(top, #ABA898, #888A80);
+  	background-image: -khtml-gradient(linear, left top, left bottom, from(#CC2900), to(#E84400));
+    background-image: -moz-linear-gradient(top, #CC2900, #E84400);
+    background-image: -ms-linear-gradient(top, #CC2900, #E84400);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #CC2900), color-stop(100%, #E84400));
+    background-image: -webkit-linear-gradient(top, #CC2900, #E84400);
+    background-image: -o-linear-gradient(top, #CC2900, #E84400);
+    background-image: linear-gradient(top, #CC2900, #E84400);
     padding: 5px 14px 6px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     color: #333;
@@ -52,30 +53,23 @@
 }
 
 .topbar .login a {
-    color: #1D1F14
+    color: #FFFFFF
 }
 
-.btn.danger, .alert-message.danger, .btn.error, .alert-message.error, .primary {
-    background-color: #2C3F59;
-    background-repeat: repeat-x;
-   background-image: -khtml-gradient(linear, left top, left bottom, from(#0F2440), to(#2C3F59));
-    background-image: -moz-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -ms-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0F2440), color-stop(100%, #2C3F59));
-    background-image: -webkit-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: -o-linear-gradient(top, #0F2440, #2C3F59);
-    background-image: linear-gradient(top, #0F2440, #2C3F59);
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    border-color: #c43c35 #c43c35 #882a25;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+#welcome {
+    font-family: 'Permanent Marker', Helvetica Neue, sans-serif;
+    font-size: 22px;
+    float: left;
+    margin-top: 9px;
+    text-shadow: 2px 2px #000;
+    color: #E84400
 }
-
 
 #welcomer #message {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    right: 0px;
+    width: 70%;
     height: 170px;
     background: rgba(0, 0, 0, 0.7)
 }
@@ -105,6 +99,55 @@
     margin: 0 5px 0 5px
 }
 
+
+.topbar div>ul .active>a, .nav .active>a {
+    background-color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+
+.topbar input:focus, .topbar input.focused {
+    outline: 0;
+    background-color: #ffffff;
+    color: #000227;
+    text-shadow: 0 1px 0 #ffffff;
+    border: 0;
+    padding: 5px 10px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+}
+
+.topbar {
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    overflow: visible
+}
+
+
+
+.btn.danger, .alert-message.danger, .btn.error, .alert-message.error, .primary {
+    background-color: #2C3F59;
+    background-repeat: repeat-x;
+   background-image: -khtml-gradient(linear, left top, left bottom, from(#0F2440), to(#2C3F59));
+    background-image: -moz-linear-gradient(top, #0F2440, #2C3F59);
+    background-image: -ms-linear-gradient(top, #0F2440, #2C3F59);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0F2440), color-stop(100%, #2C3F59));
+    background-image: -webkit-linear-gradient(top, #0F2440, #2C3F59);
+    background-image: -o-linear-gradient(top, #0F2440, #2C3F59);
+    background-image: linear-gradient(top, #0F2440, #2C3F59);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #c43c35 #c43c35 #882a25;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+}
+
+
+
+
 #welcomer {
     height: 100%
 }
@@ -128,9 +171,9 @@
     text-shadow: 2px 2px #000, -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
     color: #C4E9CC;
     position: absolute;
-    left: 30px;
-    bottom: 200px;
-    width: 300px;
+    left: 3%;
+    bottom: 70%;
+    width: 20%;
     text-align: center;
     line-height: 1em
 }
@@ -1600,15 +1643,6 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     background-color: #e2d5f0
 }
 
-.topbar {
-    height: 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-    overflow: visible
-}
 
 .topbar a {
     color: #bfbfbf;
@@ -1699,17 +1733,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     color: #ffffff
 }
 
-.topbar input:focus, .topbar input.focused {
-    outline: 0;
-    background-color: #ffffff;
-    color: #000227;
-    text-shadow: 0 1px 0 #ffffff;
-    border: 0;
-    padding: 5px 10px;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
-}
+
 
 
 
@@ -1735,10 +1759,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     text-decoration: none
 }
 
-.topbar div>ul a:hover, .nav a:hover {
-    color: #55BA79;
-    text-decoration: none
-}
+
 
 
 
@@ -4250,14 +4271,7 @@ fieldset {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
 }
 
-#welcome {
-    font-family: 'Permanent Marker', Helvetica Neue, sans-serif;
-    font-size: 44px;
-    float: left;
-    margin-top: 26px;
-    text-shadow: 2px 2px #FFF;
-    color: #000227
-}
+
 
 #stats-bar {
     background: #e5e5e5 url(bg-stats-bar.png);
