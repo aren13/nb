@@ -3,6 +3,18 @@
     background-color: #373e2b;
 }
 
+#sidebar {
+float:left;
+width:100px;
+position:fixed;
+display:block;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000
+}
+
 /*topbar text color*/
 .topbar div>ul a, .nav a {
     color: #E9E9E9
@@ -4274,28 +4286,31 @@ fieldset {
 
 
 #stats-bar {
-    background: #e5e5e5 url(bg-stats-bar.png);
-    height: 70px;
+    background: #fffff;
+    height: 300px;
+    width: 100px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.1) inset
-}
-
-#stats-bar ul {
-    float: right;
-    font-family: "News Cycle", sans-serif
+    position: fixed;
 }
 
 #stats-bar li {
+    float: left;
+    font-family: "News Cycle", sans-serif
+    position: fixed;
+}
+
+#stats-bar ul {
     margin: 6px 15px 0 0
 }
 
-#stats-bar li .title {
+#stats-bar ul .title {
     font-size: 10px;
     text-transform: capitalize;
     text-align: left;
     color: #999
 }
 
-#stats-bar li .stat {
+#stats-bar ul .stat {
     border-top: #ed1355 solid 1px;
     width: 60px;
     text-align: left;
@@ -4307,46 +4322,46 @@ fieldset {
     padding: 0 0 0 25px
 }
 
-#stats-bar li.spacer {
+#stats-bar ul.spacer {
     width: 1px;
     background: #CCC;
     height: 58px
 }
 
-#stats-bar li .avatar {
+#stats-bar ul .avatar {
     margin: 5px 0 5px 0
 }
 
-#stats-bar li.last {
+#stats-bar ul.last {
     margin-right: 0
 }
 
-#stats-bar li.last a {
+#stats-bar ul.last a {
     margin: 0;
     padding: 0
 }
 
-#stats-bar li .icon-star {
+#stats-bar ul .icon-star {
     background: url(icon-block-star.png) 0 7px no-repeat
 }
 
-#stats-bar li .icon-heart {
+#stats-bar ul .icon-heart {
     background: url(icon-block-heart.png) 0 7px no-repeat
 }
 
-#stats-bar li .icon-medal {
+#stats-bar ul .icon-medal {
     background: url(icon-block-medal.png) 0 7px no-repeat
 }
 
-#stats-bar li .icon-globe {
+#stats-bar ul .icon-globe {
     background: url(icon-block-globe.png) 0 7px no-repeat
 }
 
-#stats-bar li .icon-friends {
+#stats-bar ul .icon-friends {
     background: url(icon-block-friends.png) 0 7px no-repeat
 }
 
-#stats-bar li .icon-map {
+#stats-bar ul .icon-map {
     background: url(icon-block-map.png) 0 7px no-repeat
 }
 
