@@ -2,7 +2,7 @@ from django.conf.urls.defaults import patterns, include
 
 urlpatterns = patterns( 'account.views', 
 #	('^/?$', 'home', {}, 'website-home'),
-#	(r'^accounts/', include('registration.urls')),
+	(r'^accounts/', include('nb.registration.urls')),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/$', 'UserProfileView', {}, 'website-profile-view'),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/personal-info/$', 'personal_info', {}, 'website-profile-personal-info'),
 #	(r'^accounts/(?P<reg_no>\d+)/profile/edit/$', 'UserProfileEdit', {}, 'website-profile-edit'),

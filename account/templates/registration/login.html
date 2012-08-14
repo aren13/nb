@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Üye Girişi</h1><hr />
+{% if not user.is_anonymous %}
+<p>Zaten Giriş yaptınız, Oturumunuzu sonlandırmak için <a href="/accounts/logout/">tıklayın.</a></p>
+{% else %}
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Tamam" />
+</form>
+{% endif %}
+
+
+{% endblock %}

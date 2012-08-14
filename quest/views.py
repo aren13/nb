@@ -41,7 +41,7 @@ def quest(request , id=None):
 #	else:
 	return r2r(request, 'quest/quest.html', {})
 
-
+@login_required
 def leaderboard(request):
 #	if id == None;
 #	else:
