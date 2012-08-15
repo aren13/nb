@@ -9,15 +9,8 @@ from nb.quest.forms import *
 
 
 
-@login_required
 def quest_list(request, reg_no=None):
-	if reg_no == None:
-		other_user = request.user.get_profile()
-		quest_list=other_user.quests.all()
-	else:
-		other_user = get_user(reg_no)
-		quest_list = quest.objects.filter(client = other_user.user).order_by('-date')
-	return r2r(request, 'quest/list.html', {"quest_list":quest_list,"other_user":other_user })
+	return r2r(request, 'quest/list.html', {"quest_list":quest_list})
 
 
 @login_required

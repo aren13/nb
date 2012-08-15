@@ -1,6 +1,7 @@
 {% extends 'outerbase.html' %}
 {% block sidebar %}
 
+{% if user.is_authenticated %}
 	 <div id="sidebar" >
         	<div id="stats-bar"> 
 				<div class="container">
@@ -36,7 +37,9 @@
 			</div>
 		</div><!-- /stats-bar -->
 	</div>
+{% endif %}	
 {% endblock %}
+
 {% block content %}
 
 
