@@ -171,7 +171,7 @@
     
 	<div style="margin-top: 60px;">
 	    
-	    {% if not user.is_authenticated %}
+	    {% if not request.user.is_authenticated %}
 	    
         <div class="inner_content">
         	
@@ -205,7 +205,7 @@
 			
         <div id="header_bar">
         
-        {% if user.is_authenticated %}
+        {% if request.user.is_authenticated %}
             <h1>Welcome {{ request.user }}</h1><a href="{% url auth_logout %}?next={{ request.path|urlencode }}">logout</a><br />
             
             <p>
