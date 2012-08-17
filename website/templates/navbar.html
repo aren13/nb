@@ -3,36 +3,26 @@
 {% include 'django_facebook/_facebook_js.html' %}
 {% if user.is_authenticated %}  {# User is logged in #}
 
-<div id="shakes" class="topbar" data-dropdown="dropdown">	
-	<div class="topbar-inner">
-		<div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun 	?  </div>
-			<div class="container">
-				<ul class="nav">
-					<li><a href="/maceralar">Macera Bul</a></li>
-					<li><a href="/macera/yeni" action="new">Macera Öner</a></li>
-					<li><a href="/leaderboard">Puan Durumu</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle">Yardım</a>
-						<ul class="dropdown-menu">
-							<li><a href="/about">Hakkımızda</a></li>
-							<li><a href="/faq">SSS</a></li>
-							<li><a href="/help">Yardım</a>
-							</ul>
-							</li>
-						</ul>
-				
-				<div class="login">
-				<form>
-					<div id="facebook_login_js">
-					<a href="{% url auth_logout %}" class="btn">Çıkış</a>
-					</div>
-				</form>
-				</div>
-				
-				
-			</div>
-		</div>
-	</div>
-</div>				
+
+<ul id="nav">
+    <div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun?</div>
+    <li class="current"><a href="/maceralar" >Maceralar</a></li>
+    <li><a href="{% url quest_add %}">My Macera Öner</a></li>
+	<li><a href="{% url leaderboard %}">Puan Durumu</a></li>
+    <li><a href="">Yardım</a>
+        <ul>
+            <li><a href="/about">Hakkımızda</a></li>
+            <li><a href="/faq">SSS</a></li>
+            <li><a href="/help">Yardım</a></li>
+         </ul>
+    </li>
+
+    <li class="login">
+        <a href="{% url auth_logout %}" class="btn">Çıkış </a>
+
+    </li>
+</ul>
+
 
 {% else %} {# anonymous User show -> least #}
 
@@ -57,10 +47,19 @@
 
         </li>
 
-        <li class="login">
+		<li class="login" >		
+		<form action="{% url facebook_connect %}?facebook_login=1" method="post">
+				<input type="hidden" value="{{ request.path }}" name="next" />
+				<div id="facebook_login_js">
+				<input onclick="F.connect(this.parentNode.parentNode); return false;"  type="button"  value="Face" /><br />
+				</div>
+	        </form>
+
+			</li>
+	        <li class="login">
             <a href="{% url auth_login %}" class="btn">Giriş </a>
 
-        </li>
+		    </li>
     </ul>
 
 

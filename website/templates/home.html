@@ -1,6 +1,28 @@
-{% extends 'outerbase.html' %}
-{% block content %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Neyi Bekliyorsun</title>
+	<script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script>
+	<link href="{{ STATIC_URL }}nb.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico" />
+	<!--<link type="text/css" href="{{ STATIC_URL }}base2.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<link type="text/css" href="{{ STATIC_URL }}jq-ui/css/ui-lightness/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+	<script type="text/javascript" src="{{ STATIC_URL }}jq-ui/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}jq-ui/js/jquery-ui-1.8.20.custom.min.js"></script>    
+	<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.easing-1.3.pack.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<link rel="stylesheet" href="{{ STATIC_URL }}fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />-->
+	<script type="text/javascript" src="{{ STATIC_URL }}jquery.jshowoff.min.js"></script>
+	<link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" />
+	{% block head %}{% endblock %}
+	</head>
 
+<body>
     <script type="text/javascript">
         $(document).ready(function(){ $('#features').jshowoff({ speed:7000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
     </script>
@@ -18,28 +40,45 @@
         }
     </style>
 
-    <div id="welcomer">
-        <div id="rotator">
-            <div id="features">
+<div id="wrapper">
+{% include "navbar_old.html" %}
+	<div id="header">
 
+	</div><!-- #header-->
 
+	<div id="middle">
+		<div id="container">
+			<div id="content"> 
+				<div id="welcomer">
+					<div id="rotator">
+						<div id="features">
+							<div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;">
+								<span>
+									Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> 
+									<a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a>
+								</span>
+							</div>
+							<div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;">
+								<span>
+									Quest: Ride an elephant (India)<div>Earn 65 points</div>
+									<a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div id="message" align="center">
+						<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
+						<p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
+						{% if not user.is_authenticated %}
+						<a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span> or
+						{% endif %}
+						</span> <a href="{% url quest_list %}" class="btn large danger pinkinfo">Maceralara Gözat</a>
+					</div>
+				</div>
+			</div><!-- #content-->
+		</div><!-- #container-->
+	</div><!-- #middle-->
+</div><!-- #wrapper -->
+</body>
+</html>
 
-                <div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
-                <div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;"><span>Quest: Ride an elephant (India)<div>Earn 65 points</div> <a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
-
-            </div>
-        </div>
-
-        <div id="message" align="center">
-            <h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
-            <p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
-            {% if not user.is_authenticated %}
-                <a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span> or
-            {% endif %}
-            </span> <a href="/quests" class="btn large danger pinkinfo">Maceralara Gözat</a>
-
-
-        </div>
-    </div>
-
-{% endblock %}

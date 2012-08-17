@@ -23,9 +23,10 @@ p {
 img {
 	border: none;
 }
-input {
-	vertical-align: middle;
-}
+
+
+
+
 #wrapper {
 	width: 100%;
 	min-width: 800px;
@@ -43,7 +44,7 @@ input {
 
 }
 
-.btn{
+.btn ,input[type="button"]{
     cursor: pointer;
     display: inline-block;
     background-color: #E84400;
