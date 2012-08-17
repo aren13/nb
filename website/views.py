@@ -15,7 +15,7 @@ def home(request):
 	
 
 def about(request):
-	return r2r(request, 'about.html', {})
+	return r2r(request, 'index.html', {})
 
 
 def faq(request):

@@ -1,161 +1,33 @@
 /*topbar background color*/
 .topbar-inner, .topbar .fill {
-    background-color: #373E2B;
-    position:fixed;
-    width:100%;
+    background-color: #373e2b;
+}
+
+#sidebar {
+float:left;
+width:100px;
+position:fixed;
+display:block;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000
 }
 
 /*topbar text color*/
 .topbar div>ul a, .nav a {
-
-	font: bold 14px arial;
-    text-decoration: none;
-    color: #fff;
-    outline: none;
-    text-align: center;
-    top: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    z-index: 10;
-    display: block;
-    float: left;
-    height: 25px;
-    position: relative;
-    overflow: hidden;
-    margin: auto 10px;
+    color: #E9E9E9
 }
 
 /*topbar text color active*/
 
 .topbar div>ul a:hover, .nav a:hover {
-    color: #000;
-    text-decoration: none;
-    background-color: #A7BE82;
-	background-repeat: repeat-x;
-	background-image: -khtml-gradient(linear, left top, left bottom, from(#DEFFAE), to(#A7BE82));
-	background-image: -moz-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -ms-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DEFFAE), color-stop(100%, #A7BE82));
-	background-image: -webkit-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -o-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: linear-gradient(top, #DEFFAE, #A7BE82);
-    height: 14px;
-    line-height: normal;
-	border-color: #c43c35 #c43c35 #882a25;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-webkit-transition: 0.1s linear all;
-	-moz-transition: 0.1s linear all;
-	-ms-transition: 0.1s linear all;
-	-o-transition: 0.1s linear all;
-	transition: 0.1s linear all
+    color: #8AA8B0;
+    text-decoration: none
 }
 
-
-
-.topbar div>ul .menu-dropdown li a:hover, .nav .menu-dropdown li a:hover, .topbar div>ul .dropdown-menu li a:hover, .nav .dropdown-menu li a:hover {
-    color: #000;
-    text-decoration: none;
-    background-color: #A7BE82;
-	background-repeat: repeat-x;
-	background-image: -khtml-gradient(linear, left top, left bottom, from(#DEFFAE), to(#A7BE82));
-	background-image: -moz-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -ms-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DEFFAE), color-stop(100%, #A7BE82));
-	background-image: -webkit-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -o-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: linear-gradient(top, #DEFFAE, #A7BE82);
-    height: 15px;
-    line-height: 16px;
-	border-color: #c43c35 #c43c35 #882a25;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-webkit-transition: 0.1s linear all;
-	-moz-transition: 0.1s linear all;
-	-ms-transition: 0.1s linear all;
-	-o-transition: 0.1s linear all;
-	transition: 0.1s linear all
-}
-
-
-a.menu:after, .dropdown-toggle:after {
-    width: 0;
-    height: 0;
-    display: inline-block;
-    content: "&darr;";
-    text-indent: -99999px;
-    vertical-align: top;
-    margin-top: 8px;
-    margin-left: 4px;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #ffffff;
-    filter: alpha(opacity = 50);
-    -khtml-opacity: 0.5;
-    -moz-opacity: 0.5;
-    opacity: 0.5
-}
-
-.menu-dropdown, .dropdown-menu {
-    background-color: #A7BE82;
-	background-repeat: repeat-x;
-	background-image: -khtml-gradient(linear, left top, left bottom, from(#DEFFAE), to(#A7BE82));
-	background-image: -moz-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -ms-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #DEFFAE), color-stop(100%, #A7BE82));
-	background-image: -webkit-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: -o-linear-gradient(top, #DEFFAE, #A7BE82);
-	background-image: linear-gradient(top, #DEFFAE, #A7BE82);
-    float: left;
-    display: none;
-    position: absolute;
-    top: 40px;
-    z-index: 900;
-    width: 160px;
-    height: 140px;  
-    margin-left: 0;
-    margin-right: 0;
-    zoom: 1;
-	border-color: #c43c35 #c43c35 #882a25;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    border-style: solid;
-    border-width: 0 1px 1px;
-    -webkit-border-radius: 0 0 6px 6px;
-    -moz-border-radius: 0 0 6px 6px;
-    border-radius: 0 0 6px 6px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
-    background-clip: padding-box
-}
-
-.open .menu-dropdown, .dropdown.open .menu-dropdown, .open .dropdown-menu, .dropdown.open .dropdown-menu {
-    display: block
-}
-
-.topbar div>ul .menu-dropdown li a, .nav .menu-dropdown li a, .topbar div>ul .dropdown-menu li a, .nav .dropdown-menu li a {
-    color: #123456;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5)
-}
-
-
-
-
-
-
-.btn{
+.btn {
     cursor: pointer;
     display: inline-block;
 	background-color: #E84400;
@@ -196,25 +68,13 @@ a.menu:after, .dropdown-toggle:after {
     color: #FFFFFF
 }
 
-#sidebar {
-float:left;
-width:100px;
-position:fixed;
-display:block;
-    top: 60px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10000
-}
-
 #welcome {
     font-family: 'Permanent Marker', Helvetica Neue, sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     float: left;
-    margin-top: 13px;
+    margin-top: 9px;
     text-shadow: 2px 2px #000;
-    color: #ffffff
+    color: #E84400
 }
 
 #welcomer #message {
@@ -490,7 +350,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0
 }
 
-button, input[type="reset"], input[type="submit"] {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
     cursor: pointer;
     -webkit-appearance: button
 }
@@ -1921,7 +1781,163 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     margin-right: 0
 }
 
+.topbar div>ul.secondary-nav .menu-dropdown, .nav.secondary-nav .menu-dropdown, .topbar div>ul.secondary-nav .dropdown-menu, .nav.secondary-nav .dropdown-menu {
+    right: 0;
+    border: 0
+}
 
+.topbar div>ul a.menu:hover, .nav a.menu:hover, .topbar div>ul li.open .menu, .nav li.open .menu, .topbar div>ul .dropdown-toggle:hover, .nav .dropdown-toggle:hover, .topbar div>ul .dropdown.open .dropdown-toggle, .nav .dropdown.open .dropdown-toggle {
+    background: #7CF048;
+    background: rgba(255, 255, 255, 0.05)
+}
+
+.topbar div>ul .menu-dropdown, .nav .menu-dropdown, .topbar div>ul .dropdown-menu, .nav .dropdown-menu {
+    background-color: #333
+}
+
+.topbar div>ul .menu-dropdown a.menu, .nav .menu-dropdown a.menu, .topbar div>ul .dropdown-menu a.menu, .nav .dropdown-menu a.menu, .topbar div>ul .menu-dropdown .dropdown-toggle, .nav .menu-dropdown .dropdown-toggle, .topbar div>ul .dropdown-menu .dropdown-toggle, .nav .dropdown-menu .dropdown-toggle {
+    color: #ffffff
+}
+
+.topbar div>ul .menu-dropdown a.menu.open, .nav .menu-dropdown a.menu.open, .topbar div>ul .dropdown-menu a.menu.open, .nav .dropdown-menu a.menu.open, .topbar div>ul .menu-dropdown .dropdown-toggle.open, .nav .menu-dropdown .dropdown-toggle.open, .topbar div>ul .dropdown-menu .dropdown-toggle.open, .nav .dropdown-menu .dropdown-toggle.open {
+    background: #444;
+    background: rgba(255, 255, 255, 0.05)
+}
+
+.topbar div>ul .menu-dropdown li a, .nav .menu-dropdown li a, .topbar div>ul .dropdown-menu li a, .nav .dropdown-menu li a {
+    color: #999;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5)
+}
+
+.topbar div>ul .menu-dropdown li a:hover, .nav .menu-dropdown li a:hover, .topbar div>ul .dropdown-menu li a:hover, .nav .dropdown-menu li a:hover {
+    background-color: #191919;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#292929), to(#191919));
+    background-image: -moz-linear-gradient(top, #292929, #191919);
+    background-image: -ms-linear-gradient(top, #292929, #191919);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #191919));
+    background-image: -webkit-linear-gradient(top, #292929, #191919);
+    background-image: -o-linear-gradient(top, #292929, #191919);
+    background-image: linear-gradient(top, #292929, #191919);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#292929', endColorstr = '#191919', GradientType = 0);
+    color: #ffffff
+}
+
+.topbar div>ul .menu-dropdown .active a, .nav .menu-dropdown .active a, .topbar div>ul .dropdown-menu .active a, .nav .dropdown-menu .active a {
+    color: #ffffff
+}
+
+.topbar div>ul .menu-dropdown .divider, .nav .menu-dropdown .divider, .topbar div>ul .dropdown-menu .divider, .nav .dropdown-menu .divider {
+    background-color: #222;
+    border-color: #444
+}
+
+.topbar ul .menu-dropdown li a, .topbar ul .dropdown-menu li a {
+    padding: 4px 15px
+}
+
+li.menu, .dropdown {
+    position: relative
+}
+
+a.menu:after, .dropdown-toggle:after {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    content: "&darr;";
+    text-indent: -99999px;
+    vertical-align: top;
+    margin-top: 8px;
+    margin-left: 4px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #ffffff;
+    filter: alpha(opacity = 50);
+    -khtml-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5
+}
+
+.menu-dropdown, .dropdown-menu {
+    background-color: #ffffff;
+    float: left;
+    display: none;
+    position: absolute;
+    top: 40px;
+    z-index: 900;
+    min-width: 160px;
+    max-width: 220px;
+    _width: 160px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 6px 0;
+    zoom: 1;
+    border-color: #999;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 0 1px 1px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box
+}
+
+.menu-dropdown li, .dropdown-menu li {
+    float: none;
+    display: block;
+    background-color: none
+}
+
+.menu-dropdown .divider, .dropdown-menu .divider {
+    height: 1px;
+    margin: 5px 0;
+    overflow: hidden;
+    background-color: #eee;
+    border-bottom: 1px solid #ffffff
+}
+
+.topbar .dropdown-menu a, .dropdown-menu a {
+    display: block;
+    padding: 4px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #808080;
+    text-shadow: 0 1px 0 #ffffff
+}
+
+.topbar .dropdown-menu a:hover, .dropdown-menu a:hover, .topbar .dropdown-menu a.hover, .dropdown-menu a.hover {
+    background-color: #dddddd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+    background-image: -moz-linear-gradient(top, #eee, #ddd);
+    background-image: -ms-linear-gradient(top, #eee, #ddd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eee), color-stop(100%, #ddd));
+    background-image: -webkit-linear-gradient(top, #eee, #ddd);
+    background-image: -o-linear-gradient(top, #eee, #ddd);
+    background-image: linear-gradient(top, #eee, #ddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#dddddd', GradientType = 0);
+    color: #000227;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.025), inset 0 -1px rgba(0, 0, 0, 0.025);
+    -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.025), inset 0 -1px rgba(0, 0, 0, 0.025);
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.025), inset 0 -1px rgba(0, 0, 0, 0.025)
+}
+
+.open .menu, .dropdown.open .menu, .open .dropdown-toggle, .dropdown.open .dropdown-toggle {
+    color: #ffffff;
+    background: #ccc;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.open .menu-dropdown, .dropdown.open .menu-dropdown, .open .dropdown-menu, .dropdown.open .dropdown-menu {
+    display: block
+}
 
 .tabs, .pills {
     margin: 0 0 18px;
@@ -1983,7 +1999,27 @@ table .headerSortUp.purple, table .headerSortDown.purple {
     cursor: default
 }
 
+.tabs .menu-dropdown, .tabs .dropdown-menu {
+    top: 35px;
+    border-width: 1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px 6px;
+    border-radius: 0 6px 6px 6px
+}
 
+.tabs a.menu:after, .tabs .dropdown-toggle:after {
+    border-top-color: #999;
+    margin-top: 15px;
+    margin-left: 5px
+}
+
+.tabs li.open.menu .menu, .tabs .open.dropdown .dropdown-toggle {
+    border-color: #999
+}
+
+.tabs li.open a.menu:after, .tabs .dropdown.open .dropdown-toggle:after {
+    border-top-color: #555
+}
 
 .pills a {
     margin: 5px 3px 5px 0;
@@ -4131,7 +4167,9 @@ footer {
     border: none
 }
 
-
+.topbar div>ul a.menu:hover, .nav a.menu:hover, .topbar div>ul li.open .menu, .nav li.open .menu, .topbar div>ul .dropdown-toggle:hover, .nav .dropdown-toggle:hover, .topbar div>ul .dropdown.open .dropdown-toggle, .nav .dropdown.open .dropdown-toggle {
+    background: none
+}
 
 .topbar {
     position: relative;
@@ -4231,7 +4269,19 @@ fieldset {
     margin: 0
 }
 
-
+.dropdown-menu {
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#333), to(#222));
+    background-image: -moz-linear-gradient(top, #333, #222);
+    background-image: -ms-linear-gradient(top, #333, #222);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #222));
+    background-image: -webkit-linear-gradient(top, #333, #222);
+    background-image: -o-linear-gradient(top, #333, #222);
+    background-image: linear-gradient(top, #333, #222);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#333333', endColorstr = '#222222', GradientType = 0);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
+}
 
 
 

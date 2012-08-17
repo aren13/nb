@@ -1,45 +1,45 @@
 {% extends 'outerbase.html' %}
 {% block content %}
 
-<script type="text/javascript">		
-	$(document).ready(function(){ $('#features').jshowoff({ speed:7000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false}); });
-	</script>
-	
-<style type="text/css">
-.preload {
-  background-image: url({{ STATIC_URL }}1.jpg)url({{ STATIC_URL }}2.jpg);
-  background-position: -9999px -9999px;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 1px; 
-}
-</style>
+    <script type="text/javascript">
+        $(document).ready(function(){ $('#features').jshowoff({ speed:7000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
+    </script>
 
-<div id="welcomer">	
-	<div id="rotator">
-	<div id="features">
-	
-	
-		
-		<div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
-		<div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;"><span>Quest: Ride an elephant (India)<div>Earn 65 points</div> <a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+    <style type="text/css">
+        .preload {
+            background-image: url({{ STATIC_URL }}1.jpg)url({{ STATIC_URL }}2.jpg);
+            background-position: -9999px -9999px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 1px;
+        }
+    </style>
 
-	</div>
-	</div>
-	
-	<div id="message" align="center">
-		<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
-		<p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
-		{% if not user.is_authenticated %}	
-			<a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span> or 
-		{% endif %}
-		</span> <a href="/quests" class="btn large danger pinkinfo">Maceralara Gözat</a>
-		
+    <div id="welcomer">
+        <div id="rotator">
+            <div id="features">
 
-	</div>
-</div>
+
+
+                <div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;"><span>Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> <a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+                <div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;"><span>Quest: Ride an elephant (India)<div>Earn 65 points</div> <a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a></span></div>
+
+            </div>
+        </div>
+
+        <div id="message" align="center">
+            <h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
+            <p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
+            {% if not user.is_authenticated %}
+                <a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span> or
+            {% endif %}
+            </span> <a href="/quests" class="btn large danger pinkinfo">Maceralara Gözat</a>
+
+
+        </div>
+    </div>
 
 {% endblock %}

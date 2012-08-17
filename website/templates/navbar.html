@@ -5,7 +5,7 @@
 
 <div id="shakes" class="topbar" data-dropdown="dropdown">	
 	<div class="topbar-inner">
-		<div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun ?  </div>
+		<div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun 	?  </div>
 			<div class="container">
 				<ul class="nav">
 					<li><a href="/maceralar">Macera Bul</a></li>
@@ -19,9 +19,16 @@
 							</ul>
 							</li>
 						</ul>
-				<div class="logout">
+				
+				<div class="login">
+				<form>
+					<div id="facebook_login_js">
 					<a href="{% url auth_logout %}" class="btn">Çıkış</a>
+					</div>
+				</form>
 				</div>
+				
+				
 			</div>
 		</div>
 	</div>
@@ -29,36 +36,32 @@
 
 {% else %} {# anonymous User show -> least #}
 
-<div id="shakes" class="topbar" data-dropdown="dropdown">	
-	<div class="topbar-inner">
-		<div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun?</div>
-			<div class="container">
-				<ul class="nav">
-					<li><a href="/maceralar">Macera Bul</a></li>
-					<li><a href="/macera/yeni" action="new">Macera Öner</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle">Yardım</a>
-						<ul class="dropdown-menu">
-							<li><a href="/about">Hakkımızda</a></li>
-							<li><a href="/faq">SSS</a></li>
-							<li><a href="/help">Yardım</a></li>
-						</ul>
-					</li>
-				</ul>
-				<div class="login">
-							<!--form to call registration via facebook -->
-            <form action="{% url facebook_connect %}?facebook_login=1" method="post">
+    <ul id="nav">
+        <div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun?</div>
+        <li class="current"><a href="/maceralar" >Maceralar</a></li>
+        <li><a href="/macera/yeni">My Macera Öner</a></li>
+        <li><a href="">Yardım</a>
+            <ul>
+                <li><a href="/about">Hakkımızda</a></li>
+                <li><a href="/faq">SSS</a></li>
+                <li><a href="/help">Yardım</a></li>
+             </ul>
+        </li>
+        <li class="login">
+            <!--form to call registration via facebook -->
 
-				<input type="hidden" value="{{ request.path }}" name="next" />
-				<div id="facebook_login_js">
-				<input onclick="F.connect(this.parentNode.parentNode); return false;" type="button" value="Facebook ile bağlan" class="btn" /><br />
-				</div>
-	        </form>
-				<a href="{% url auth_login %}" class="btn">Giriş </a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>	
+                <input type="hidden" value="{{ request.path }}" name="next" />
+
+                    <a onclick="F.connect(this.parentNode.parentNode); return false;" class="btn">Facebook ile bağlan </a>
+
+
+        </li>
+
+        <li class="login">
+            <a href="{% url auth_login %}" class="btn">Giriş </a>
+
+        </li>
+    </ul>
 
 
 {% endif %}
