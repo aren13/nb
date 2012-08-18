@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dca6e05-9ea3-44f4-9fee-f92bd9e89231" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nb.db" afterPath="$PROJECT_DIR$/nb.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/nb.css" afterPath="$PROJECT_DIR$/website/static/nb.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/home.html" afterPath="$PROJECT_DIR$/website/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/navbar.html" afterPath="$PROJECT_DIR$/website/templates/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/views.py" afterPath="$PROJECT_DIR$/website/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/dropdown.css" afterPath="$PROJECT_DIR$/website/static/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/style.css" afterPath="$PROJECT_DIR$/website/static/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/about.html" afterPath="$PROJECT_DIR$/website/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/templates/base.html" afterPath="$PROJECT_DIR$/website/templates/base.html" />
     </list>
     <ignored path="nb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,25 +31,7 @@
       <file leaf-file-name="nb.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/nb.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="23" selection-start="4425" selection-end="4444" vertical-scroll-proportion="-9.935484">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="61" selection-start="490" selection-end="490" vertical-scroll-proportion="0.21818182">
+            <state line="2" column="23" selection-start="82" selection-end="88" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,7 +40,7 @@
       <file leaf-file-name="dropdown.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/static/dropdown.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="16" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0">
+            <state line="26" column="11" selection-start="357" selection-end="359" vertical-scroll-proportion="-3.7741935">
               <folding />
             </state>
           </provider>
@@ -69,25 +49,25 @@
       <file leaf-file-name="navbar.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="31" selection-start="1679" selection-end="1679" vertical-scroll-proportion="-13.708333">
+            <state line="52" column="31" selection-start="1781" selection-end="1781" vertical-scroll-proportion="-32.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/website/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+            <state line="80" column="22" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.5439094">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="outerbase.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/outerbase.html">
+      <file leaf-file-name="sidebar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="6" selection-start="1900" selection-end="1900" vertical-scroll-proportion="-5.625">
+            <state line="26" column="29" selection-start="678" selection-end="678" vertical-scroll-proportion="-16.25">
               <folding />
             </state>
           </provider>
@@ -96,7 +76,16 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="285" selection-end="285" vertical-scroll-proportion="-6.875">
+            <state line="24" column="30" selection-start="934" selection-end="934" vertical-scroll-proportion="-9.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="5912" selection-end="5912" vertical-scroll-proportion="-23.125">
               <folding />
             </state>
           </provider>
@@ -118,10 +107,13 @@
         <option value="$PROJECT_DIR$/website/templates/home.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
         <option value="$PROJECT_DIR$/website/templates/navbar.html" />
+        <option value="$PROJECT_DIR$/website/templates/index.html" />
+        <option value="$PROJECT_DIR$/website/templates/base.html" />
         <option value="$PROJECT_DIR$/website/static/nb.css" />
+        <option value="$PROJECT_DIR$/website/templates/about.html" />
+        <option value="$PROJECT_DIR$/website/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/website/static/dropdown.css" />
         <option value="$PROJECT_DIR$/website/static/style.css" />
-        <option value="$PROJECT_DIR$/website/templates/index.html" />
       </list>
     </option>
   </component>
@@ -242,10 +234,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Django/Jinja2 Template" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Django/Jinja2 Template" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -279,7 +271,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -343,8 +335,9 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2705036" sideWeight="0.05748663" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15107913" sideWeight="0.9612299" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15347722" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39973262" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328877" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -353,7 +346,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39973262" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -416,77 +408,85 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/website/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="615" selection-end="615" vertical-scroll-proportion="-6.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/nb.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="23" selection-start="4425" selection-end="4444" vertical-scroll-proportion="-9.935484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/dropdown.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="16" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="30" selection-start="615" selection-end="615" vertical-scroll-proportion="-6.6" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/homeee.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="27" selection-start="196" selection-end="196" vertical-scroll-proportion="0.12727273">
-          <folding />
-        </state>
+        <state line="13" column="27" selection-start="196" selection-end="196" vertical-scroll-proportion="0.12727273" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/website/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="285" selection-end="285" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/outerbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="6" selection-start="1900" selection-end="1900" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="31" selection-start="1679" selection-end="1679" vertical-scroll-proportion="-13.708333">
+        <state line="8" column="61" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="641" selection-end="641" vertical-scroll-proportion="-11.25">
+        <state line="18" column="12" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.027272727">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/website/templates/outerbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="61" selection-start="490" selection-end="490" vertical-scroll-proportion="0.21818182">
+        <state line="24" column="6" selection-start="1900" selection-end="1900" vertical-scroll-proportion="0.6394316">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="5912" selection-end="5912" vertical-scroll-proportion="-23.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="30" selection-start="934" selection-end="934" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="29" selection-start="678" selection-end="678" vertical-scroll-proportion="-16.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/nb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="82" selection-end="88" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="31" selection-start="1781" selection-end="1781" vertical-scroll-proportion="-32.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/dropdown.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="11" selection-start="357" selection-end="359" vertical-scroll-proportion="-3.7741935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="22" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.5439094">
           <folding />
         </state>
       </provider>

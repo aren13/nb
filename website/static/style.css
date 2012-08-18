@@ -78,18 +78,18 @@ img {
 
 .topbar .login {
     float: right;
-    padding-top: 5px
+    margin-left: 50px;
 }
 
 .topbar .login a {
-    color: #FFFFFF
+    color: #ffffff
 }
 
 #welcome {
     font-family: 'Permanent Marker', Helvetica Neue, sans-serif;
     font-size: 26px;
     float: left;
-    margin-top: 13px;
+    margin-top: 9px;
     text-shadow: 2px 2px #000;
     color: #ffffff
 }
@@ -121,7 +121,8 @@ img {
 	overflow: hidden;
 }
 #content {
-	padding: 0 270px 0 270px;
+	padding: 0 270px 0 190px;
+
 }
 
 
@@ -129,12 +130,71 @@ img {
 -----------------------------------------------------------------------------*/
 #sideLeft {
 	float: left;
-	width: 250px;
+	width: 185px;
 	margin-left: -100%;
 	position: relative;
 	background: #B5E3FF;
 }
 
+#stats-bar {
+    background: #000000;
+    height: 310px;
+    width: 85px;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+}
+
+#stats-bar li {
+    float: left;
+    font-family: "News Cycle", sans-serif;
+}
+
+#stats-bar ul {
+    margin: 6px 15px 0 0
+}
+
+#stats-bar ul .title {
+    font-size: 10px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #999
+}
+
+#stats-bar ul .stat {
+    border-top: #09ed17 solid 1px;
+    width: 60px;
+    text-align: left;
+    margin: 0 auto 5px auto;
+    line-height: 35px;
+    color: #09ed17;
+    float: right;
+    font-size: 30px;
+    padding: 0 0 0 25px
+}
+
+
+
+#stats-bar ul .avatar {
+    margin: 5px 0 5px 5px;
+
+}
+
+#stats-bar ul.last {
+    margin-right: 0
+}
+
+#stats-bar ul.last a {
+    margin: 0;
+    padding: 0
+}
+
+
+
+#stats-bar .sign-up-btn {
+    float: right;
+    margin-top: 15px
+}
 
 /* Sidebar Right
 -----------------------------------------------------------------------------*/
@@ -145,6 +205,7 @@ img {
 	margin-left: -250px;
 	position: relative;
 	background: #FFACAA;
+
 }
 
 
