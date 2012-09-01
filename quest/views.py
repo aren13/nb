@@ -9,7 +9,7 @@ from nb.quest.forms import *
 
 
 
-def quest_list(request, reg_no=None):
+def quest_list(request):
 	return r2r(request, 'quest/list.html', {"quest_list":quest_list})
 
 

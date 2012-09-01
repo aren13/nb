@@ -15,7 +15,7 @@ global_attrs={'col':60, 'rows':4}
 class QuestForm(forms.ModelForm):
 	class Meta:
 		model = Quest
-		fields = ('title', 'country', 'city', 'description', 'difficulty', 'shareOnFacebook')
+		fields = ('photo', 'title', 'country', 'city', 'description', 'difficulty', 'shareOnFacebook')
 		widgets = {
 			'description': forms.Textarea(attrs={'cols':60 , 'rows':4 }),
 		}
