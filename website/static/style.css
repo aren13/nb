@@ -44,10 +44,10 @@ img {
 
 }
 
-.btn ,input[type="button"]{
+.btn {
     cursor: pointer;
     display: inline-block;
-    background-color: #E84400;
+    background-color: #000000;
     background-repeat: repeat-x;
     background-image: -khtml-gradient(linear, left top, left bottom, from(#CC2900), to(#E84400));
     background-image: -moz-linear-gradient(top, #CC2900, #E84400);
@@ -59,10 +59,10 @@ img {
     padding: 5px 14px 6px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     color: #333;
-    font-size: 13px;
+    font-size: 11px;
     line-height: normal;
     border-color: #c43c35 #c43c35 #882a25;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -76,14 +76,7 @@ img {
     transition: 0.1s linear all
 }
 
-.topbar .login {
-    float: right;
-    margin-left: 50px;
-}
 
-.topbar .login a {
-    color: #ffffff
-}
 
 #welcome {
     font-family: 'Permanent Marker', Helvetica Neue, sans-serif;

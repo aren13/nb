@@ -4,7 +4,7 @@ a {
 #nav {
 	margin: 0;
 	padding: 7px 6px 0;
-	line-height: 100%;
+	line-height: 1px;
     position: fixed;
     z-index: 12;
     width: 100%;
@@ -16,16 +16,17 @@ a {
 	border: solid 1px #6d6d6d;
 }
 #nav li {
-	margin: 0 5px;
-	padding: 0 0 8px;
+	margin:0 5px;
+	padding:  0 0 8px;
 	float: left;
 	position: relative;
 	list-style: none;
 }
 /* main level link */
 #nav a {
-	font-weight: bold;
-	color: #e7e5e5;
+    font: bold 11px arial;
+    text-transform: uppercase;
+	color: #ffffff;
 	text-decoration: none;
 	display: block;
 	padding:  8px 20px;
@@ -35,32 +36,27 @@ a {
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
 }
 /* main level link hover */
-#nav .current a, #nav li:hover > a {
-	background: #d1d1d1; /* for non-css3 browsers */
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#a1a1a1'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#a1a1a1)); /* for webkit browsers */
+#nav .current a, #nav li:hover > a, #nav li:hover > .enis a {
+	background: #000000; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEFFAE', endColorstr='#A7BE82'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#DEFFAE), to(#A7BE82)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #ebebeb,  #a1a1a1); /* for firefox 3.6+ */
 
-	color: #444;
-	border-top: solid 1px #f8f8f8;
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+	color: #000000;);
 }
 /* sub levels link hover */
 #nav ul li:hover a, #nav li:hover li a {
 	background: none;
 	border: none;
-	color: #666;
+	color: #000000;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 }
 #nav ul a:hover {
 	background: #0399d4 !important; /* for non-css3 browsers */
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#04acec', endColorstr='#0186ba'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba)) !important; /* for webkit browsers */
-	background: -moz-linear-gradient(top,  #04acec,  #0186ba) !important; /* for firefox 3.6+ */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#373E2B', endColorstr='#373E2B'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#373E2B), to(#373E2B)) !important; /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #373E2B,  #373E2B) !important; /* for firefox 3.6+ */
 
 	color: #fff !important;
 	-webkit-border-radius: 0;
@@ -70,8 +66,8 @@ a {
 /* level 2 list */
 #nav ul {
 	background: #ddd; /* for non-css3 browsers */
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#cfcfcf'); /* for IE */
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cfcfcf)); /* for webkit browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#DEFFAE', endColorstr='#A7BE82'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#DEFFAE), to(#A7BE82)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #fff,  #cfcfcf); /* for firefox 3.6+ */
 	display: none;
 	margin: 0;
@@ -94,13 +90,15 @@ a {
 	display: block;
 }
 #nav ul li {
+
 	float: none;
 	margin: 0;
 	padding: 0;
 }
 #nav ul a {
-	font-weight: normal;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, .9);
+    font: normal 11px arial;
+    text-transform: uppercase;
+    color: #000000;
 }
 /* level 3+ list */
 #nav ul ul {
@@ -109,12 +107,18 @@ a {
 }
 /* rounded corners for first and last child */
 #nav ul li:first-child > a {
+    font: normal 11px arial;
+    text-transform: uppercase;
+    color: #000000;
 	-webkit-border-top-left-radius: 9px;
 	-moz-border-radius-topleft: 9px;
 	-webkit-border-top-right-radius: 9px;
 	-moz-border-radius-topright: 9px;
 }
 #nav ul li:last-child > a {
+    font: normal 11px arial;
+    text-transform: uppercase;
+    color: #000000;
 	-webkit-border-bottom-left-radius: 9px;
 	-moz-border-radius-bottomleft: 9px;
 	-webkit-border-bottom-right-radius: 9px;
@@ -138,3 +142,7 @@ html[xmlns] #nav {
 * html #nav {
 	height: 1%;
 }
+#nav .login {
+    float: right;
+}
+
