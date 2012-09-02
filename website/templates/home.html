@@ -20,11 +20,12 @@
 	<script type="text/javascript" src="{{ STATIC_URL }}jquery.jshowoff.min.js"></script>
 	<link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" />
 	{% block head %}{% endblock %}
+	    <link rel="stylesheet" href="{{ STATIC_URL }}dropdown.css" type="text/css" media="screen, projection" />
 	</head>
 
 <body>
     <script type="text/javascript">
-        $(document).ready(function(){ $('#features').jshowoff({ speed:7000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
+        $(document).ready(function(){ $('#features').jshowoff({ speed:1000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
     </script>
 
     <style type="text/css">
@@ -40,12 +41,11 @@
         }
     </style>
 
-<div id="wrapper">
-{% include "navbar_old.html" %}
 	<div id="header">
-
+	{% include "navbar.html" %}
 	</div><!-- #header-->
 
+<div id="wrapper">
 	<div id="middle">
 		<div id="container">
 			<div id="content"> 
@@ -64,8 +64,9 @@
 									<a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a>
 								</span>
 							</div>
-						</div>
-					</div>
+						</div><!-- #features-->
+					</div><!-- #rotator-->
+
 					<div id="message" align="center">
 						<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
 						<p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
@@ -74,7 +75,7 @@
 						{% endif %}
 						</span> <a href="{% url quest_list %}" class="btn large danger pinkinfo">Maceralara Gözat</a>
 					</div>
-				</div>
+				</div><!-- #welcomer-->
 			</div><!-- #content-->
 		</div><!-- #container-->
 	</div><!-- #middle-->

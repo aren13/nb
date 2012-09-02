@@ -1,1 +1,37 @@
 {% extends "base.html" %}
+
+{% block content %}
+<table>
+	<thead>
+	  <tr>
+			<th></th>
+			<th></th>
+			<td></td>
+			<th style="text-align: center">Puan</th>
+			<th style="text-align: center">Tamamlanan</th>
+{#			<th style="text-align: center">Countries</th> #}
+		</tr>
+	</thead>
+	<tbody>
+	{% if users %}
+		{% for user in users %}
+		  <tr>
+		  	<td width="20%" class="rank" style="text-align: center">{{user.rank}}</td>
+		  	<td width="15%"><a href="/users/johnnyroa"><img alt="1_thumb" class="avatar" src={{user.image}} /></a></td>
+		  	<td width="25%" class="username"><a href="/users/johnnyroa"> {{user.name}}</a></td>
+{#		  	<td width="10%" class="completed" style="text-align: center">24</td> #}
+		  	<td width="10%" class="points" style="text-align: center">1376</td>
+		  </tr>
+		  {%endfor%}
+	{% else %}
+		Daha kullanıcımız yok ya :( ...
+		<br/>
+	{% endif %}
+	</tbody>
+</table>
+
+
+
+
+
+{% endblock %}
