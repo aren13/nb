@@ -36,6 +36,6 @@ def quest(request , id=None):
 
 @login_required
 def leaderboard(request):
-#	if id == None;
-#	else:
-	return r2r(request, 'quest/leaderboard.html', {})	
+#	user_list = User.objects.all().order_by('rank')
+	user_list = User.objects.all()
+	return r2r(request, 'quest/leaderboard.html', {"users":user_list})	
