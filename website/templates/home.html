@@ -25,7 +25,7 @@
 
 <body>
     <script type="text/javascript">
-        $(document).ready(function(){ $('#features').jshowoff({ speed:1000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
+        $(document).ready(function(){ $('#features').jshowoff({ speed:10000,changeSpeed: 700, cssClass: 'false', links: false, hoverPause: false, controls: false}); });
     </script>
 
     <style type="text/css">
@@ -40,6 +40,24 @@
             width: 1px;
         }
     </style>
+    <script type="text/javascript">
+        $(function() {
+            $('#slideout').hover(function() {
+                $(this).animate({left:'5px'}, {queue:false, duration: 500});
+            }, function() {
+                $(this).animate({left:'-85px'}, {queue:false, duration: 500});
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#slideClick').toggle(function() {
+                $(this).parent().animate({left:'5px'}, {queue:false, duration: 500});
+            }, function() {
+                $(this).parent().animate({left:'-85px'}, {queue:false, duration: 500});
+            });
+        });
+    </script>
 
 	<div id="header">
 	{% include "navbar.html" %}
@@ -54,14 +72,23 @@
 						<div id="features">
 							<div style="background: url({{ STATIC_URL }}1.jpg) center center no-repeat; background-size: cover;">
 								<span>
-									Quest: Be swallowed by the rapids! (Mexico)<div>Earn 60 points</div> 
-									<a href="/quests/mexico-be-swallowed-by-the-rapids" class="btn small danger pinkinfo">Go To Quest ></a>
-								</span>
+                                    <div onclick="location.href='/quests/mexico-be-swallowed-by-the-rapids';" style="cursor:pointer;">
+									Macera: İstinye sahilden FSM'yi çekmek (İstanbul)  </div>
+                                    <div id="point">160 puan</div>
+
+
+
+                                </span>
+
 							</div>
 							<div style="background: url({{ STATIC_URL }}2.jpg) center center no-repeat; background-size: cover;">
 								<span>
-									Quest: Ride an elephant (India)<div>Earn 65 points</div>
-									<a href="/quests/india-ride-an-elephant" class="btn small danger pinkinfo">Go To Quest ></a>
+                                    <div onclick="location.href='/quests/india-ride-an-elephant';" style="cursor:pointer;">
+                                        Macera: Şükrü Saraçoğlu Stadyumu fotoğrafı çekme (İstanbul)</div>
+
+
+                                <div id="point">60 puan</div>
+
 								</span>
 							</div>
 						</div><!-- #features-->
@@ -71,9 +98,9 @@
 						<h1>Neyi Bekliyorsun'a Hoşgeldiniz!</h1>
 						<p>Neyi Bekliyorsun, gezmeyi ve maceraya atılmayı sevenlere yönelik bir platformdur. Neyi Bekliyorsun ile yeni maceralara yelken açarken unutulmaz deneyimler yaşayabilir ve o anları ölümsüzleştirebilirsiniz.</p>
 						{% if not user.is_authenticated %}
-						<a href="#" class="fb-auth sign-up-btn btn large danger">Facebook ile Giriş</a> <span> or
+						<a href="#" class="facebtn">Facebook ile Giriş</a> <span> ya da
 						{% endif %}
-						</span> <a href="{% url quest_list %}" class="btn large danger pinkinfo">Maceralara Gözat</a>
+						</span> <a href="{% url quest_list %}" class="btn">Maceralara Gözat</a>
 					</div>
 				</div><!-- #welcomer-->
 			</div><!-- #content-->
