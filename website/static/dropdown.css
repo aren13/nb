@@ -144,5 +144,6 @@ html[xmlns] #nav {
 }
 #nav .login {
     float: right;
+    margin-right: 20px;
 }
 

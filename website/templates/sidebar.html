@@ -1,31 +1,52 @@
-<div id="stats-bar">
-					<li>
-						<ul class="last">
-							<a href="/users/lifecostumer"><img alt="1066_thumb" class="avatar" src="http://s3.amazonaws.com/rambler-production/avatars/1066_thumb.jpg?1344695910" /></a>
-						</ul>
+<script type="text/javascript">
+$(function() {
+$('#slideout').hover(function() {
+$(this).animate({left:'5px'}, {queue:false, duration: 500});
+}, function() {
+$(this).animate({left:'-85px'}, {queue:false, duration: 500});
+});
+});
+</script>
+<script type="text/javascript">
+    jQuery(function($) {
+        $('#slideClick').toggle(function() {
+            $(this).parent().animate({left:'5px'}, {queue:false, duration: 500});
+        }, function() {
+            $(this).parent().animate({left:'-85px'}, {queue:false, duration: 500});
+        });
+    });
+</script>
 
-						<ul>
-							<div class="title">COUNTRIES</div>
-							<div class="stat icon-globe">0</div>
-						</ul>
 
-						<ul>
-							<div class="title">COMPLETED</div>
-							<div class="stat icon-map">0</div>
-						</ul>
+<div class="fixed">
+<div id="slideout">
+    <div id="slidecontent">
+        <ul>
+            <div class="title">sıra</div>
+            <div class="stat icon-medal">1</div>
+        </ul>
+        <ul>
+            <div class="title">puan</div>
+            <div class="stat icon-star">0</div>
+        </ul>
+        <ul>
+            <div class="title">şehir</div>
+            <div class="stat icon-globe">0</div>
+        </ul>
+        <ul>
+            <div class="title">tamamlanan</div>
+            <div class="stat icon-map">0</div>
+        </ul>
 
-						<ul>
-							<div class="title">RANK</div>
-							<div class="stat icon-medal">
-								n/a
-							</div>
-						</ul>
+    </div>
+    <div id="clickme">
+       <img alt="1066_thumb" class="avatar" src="http://s3.amazonaws.com/rambler-production/avatars/1066_thumb.jpg?1344695910" />
+        <ul>
+            <div class="name">Enis</div>
+            <div class="surname">Güngör</div>
+        </ul>
 
-						<ul>
-							<div class="title">POINTS</div>
-							<div class="stat icon-star">0</div>
-						</ul>
-				</li>
-
-</div><!-- /stats-bar -->
+    </div>
+</div>
+</div>
 
