@@ -4,9 +4,6 @@ from nb.quest.models import *
 from nb.django_facebook.models import FacebookProfileModel
 
 
-
-
-
 # Create your models here.
 EDUCATION_CHOICES= (('ilk', 'İlköğretim') , ('lise','Lise') , ('onLisans', 'Önlisans'), ('lisans','Lisans'),('yuksek','Yüksek Lisans'),('doktora','Doktora'))
 GENDER = ((0, 'Erkek') , (1, 'Kadın'))
@@ -31,7 +28,8 @@ class UserProfile(FacebookProfileModel):
 	website = models.URLField(verbose_name="İnternet sitesi", blank=True, null=True)
 	facebook = models.URLField(verbose_name="Facebook Hesabı", blank=True, null=True)
 	twitter = models.CharField(verbose_name="Twitter Hesabı",max_length=50 , blank=True , null=True)
-	quests = models.ManyToManyField(CompletedQuest, verbose_name="tamamladığı maceralar" , null=True, blank=True)
+	created_quests = models.ManyToManyField(Quest, verbose_name="oluşturduğu maceralar" , null=True, blank=True)
+	completed_quests = models.ManyToManyField(CompletedQuest, verbose_name="tamamladığı maceralar" , null=True, blank=True)
 	
 	def __unicode__(self):
 		return u'%s %s' % (self.name , self.surname)

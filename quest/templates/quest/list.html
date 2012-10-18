@@ -1,1 +1,13 @@
 {% extends "base.html" %}
+{% block content %}
+		<br/>
+	{% for q in quest_list_all %}
+		<div class= "quest">
+			{{ q.title }}
+			{{ q.description }}
+			{{ q.photo }}
+			{{ q.date }}
+		</div>
+		<br/>	
+	{% endfor %}
+{% endblock %}

@@ -16,6 +16,7 @@ urlpatterns = patterns('',
 	url(r'^', include('nb.website.urls')),
 	url(r'^', include('nb.account.urls')),
 	url(r'^', include('nb.quest.urls')),
+	
 
 	# socialregistration urls
 #	url(r'^social/', include('socialregistration.urls',namespace='socialregistration')),     

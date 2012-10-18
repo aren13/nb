@@ -28,17 +28,15 @@ form .field_container .help_text {
 }
 </style>
 	<form enctype="multipart/form-data" id="bmi_add" method="post">{% csrf_token %}
-		{% if other_user.gender == 0 %}
-			{% for field in form %}
-				{%if field.name != "regl" %}
+
+			{% for field in photo_form %}
 					{% include "formfields.html" %}
-				{% endif %}
 			{% endfor %}
-		{% else %}
-			{% for field in form %}
+
+			{% for field in quest_form %}
 				{% include "formfields.html" %}
 			{% endfor %}
-		{% endif %}
+
 		<input class="button" type="submit" value="Kaydet" />
 		<a class="button" style="float:right" href="{% url quest_list %}"> iptal </a>
 	</form>
