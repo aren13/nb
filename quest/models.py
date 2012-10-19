@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 ##
-from nb.quest.choices import *
+from choices import *
 
 #def quest_file_upload_to(instance, filename):
 #    return '/'.join(['quests', '%Y/%m/%d' , instance.id ,filename])

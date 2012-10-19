@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style type="text/css">
+form .field_container {
+    vertical-align: middle;
+    margin-bottom: 5px;
+    clear: both;
+}
+form .field_container .field_label {
+    float: left;
+	font-weight: bold;
+    width: 30%;
+    vertical-align: middle;
+    margin: 10px 0 0 10px;
+}
+form .field_field {
+    float: left;
+    margin: 5px 0 5px 10px;
+}
+form .field_container .help_text {
+    float: left;
+    color: red;
+    font-size:11px;
+    margin-left: 5px;
+    margin: 10px 0 0 5px;
+    width: 40%;
+}
+</style>
+	<form enctype="multipart/form-data" id="bmi_add" method="post">{% csrf_token %}
+
+			{% for field in photo_form %}
+					{% include "formfields.html" %}
+			{% endfor %}
+
+			{% for field in quest_complete_form %}
+				{% include "formfields.html" %}
+			{% endfor %}
+
+		<input class="button" type="submit" value="Kaydet" />
+		<a class="button" style="float:right" href="{% url quest_list %}"> iptal </a>
+	</form>
+{% endblock %}

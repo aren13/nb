@@ -26,4 +26,13 @@ class QuestForm(forms.ModelForm):
 		widgets = {
 			'description': forms.Textarea(attrs={'cols':60 , 'rows':4 }),
 		}
+
+class QuestCompleteForm(forms.ModelForm):
+	class Meta:
+		model = CompletedQuest
+		exclude = ( 'quest', 'photo' , 'competitor' , 'status' , 'date' )
+#		fields = ('photo', 'title', 'country', 'city', 'description', 'difficulty', 'shareOnFacebook')
+		widgets = {
+			'description': forms.Textarea(attrs={'cols':60 , 'rows':4 }), #can be used when adding comment on completed quest.
+		}
 	
