@@ -17,10 +17,10 @@
 		{% for user in users %}
 		  <tr>
 		  	<td width="20%" class="rank" style="text-align: center">{{user.rank}}</td>
-		  	<td width="15%"><a href="/users/johnnyroa"><img alt="1_thumb" class="avatar" src={{user.image}} /></a></td>
-		  	<td width="25%" class="username"><a href="/users/johnnyroa"> {{user.name}}</a></td>
+		  	<td width="25%"><a href="/user/{{ user.id }}/profile/"><img alt="1_thumb" class="avatar" src={{MEDIA_URL}}{{user.image}} width="48" height="48" /></a></td>
+		  	<td width="25%" class="username"><a href="/user/{{ user.id }}/profile"> {{user.name}} {{ user.surname }}</a></td>
 {#		  	<td width="10%" class="completed" style="text-align: center">24</td> #}
-		  	<td width="10%" class="points" style="text-align: center">1376</td>
+		  	<td width="20%" class="points" style="text-align: center">{{ user.point }}</td>
 		  </tr>
 		  {%endfor%}
 	{% else %}

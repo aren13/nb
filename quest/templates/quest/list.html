@@ -3,10 +3,16 @@
 		<br/>
 	{% for q in quest_list_all %}
 		<div class= "quest">
+			<a href="/maceralar/{{ q.id }}/">
+			<img alt="{{other_user.id}}" class="avatar" src="{{MEDIA_URL}}{{ q.photo }}"  width="256" height="256"/>
+			</a>
+			<br>
 			{{ q.title }}
+			<br>
 			{{ q.description }}
-			{{ q.photo }}
+			<br>
 			{{ q.date }}
+			<br><br><br>
 		</div>
 		<br/>	
 	{% endfor %}

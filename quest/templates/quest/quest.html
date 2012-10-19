@@ -1,1 +1,54 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+	
+<div id="quest-photo">
+	<img src="{{ MEDIA_URL }}{{ quest.photo }}" alt=" {{ quest.id }}" />
+
+
+</div>	
+	
+<div id="quest-info">
+	<br>
+	Title : {{ quest.title }}
+	<br>
+	Status : {{ quest.status }}
+	<br>
+	Description : {{ quest.description }}
+	<br>
+	City : {{ quest.city }}
+	<br>
+	Country : {{ quest.country }}
+	<br>
+	Difficulty : {{ quest.difficulty }}
+	<br>
+	Point : {{ quest.point }}
+	<br>
+	Date : {{ quest.date }}
+	<br>
+	Shared onFB: {{ quest.shareOnFacebook }}
+	<br>
+	Photo_id : {{ quest.photo_id }}
+	<br>
+	Photo : {{ quest.photo }}
+	<br>
+	Creator : {{ quest.creator }}
+	<br>
+	Creator_id : {{ quest.creator_id }}
+	<br>
+
+	<div>
+	<p>Bu maceranın id: {{ quest.id }} ise completedquest 'leri search edip list_of_completedquests assign et.
+Sonra burada resimlerde ve Completed tabında göster.</p></div>
+
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

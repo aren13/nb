@@ -4,9 +4,7 @@
 <div id="fb-root"></div>
 {% include 'django_facebook/_facebook_js.html' %}
 
-{% if user.is_authenticated %}  {# User is logged in #}
-
-
+{% if not user.is_anonymous  %}  {# User is logged in #}
 
 <ul id="nav">
     <div id="welcome" onclick="location.href='/';" style="cursor:pointer;">Neyi Bekliyorsun?</div>

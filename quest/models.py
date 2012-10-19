@@ -1,4 +1,5 @@
 #-*- coding: utf-8 -*-
+import os
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -46,6 +47,7 @@ class Quest(models.Model):
 		return u'%s' %self.title
 		
 	def photoName(self):
+		photo = self.photo
 		return os.path.basename(self.photo.name)
 
 class CompletedQuest(models.Model):

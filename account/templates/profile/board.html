@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+	<br/>
+	<img alt="{{other_user.id}}" class="avatar" src="{{MEDIA_URL}}{{ other_user.image }}"  width="256" height="256"/>
+
+	<br/>
+
+	Üye No : {{ other_user.id }}
+	<br>
+	Adı : {{ other_user.name }}
+	<br>
+	Soy Adı : {{ other_user.surname }}
+	<br>
+	Puan : {{ other_user.point }}
+	<br>
+	Mail : {{ other_user.mail }}
+	<br>
+	Town : {{ other_user.town }}
+	<br>
+	Birtdate : {{ other_user.birthdate }}
+	<br>
+	Education : {{ other_user.education }}
+	<br>
+	Website : {{ other_user.website }}
+	<br>
+	FaceBook : {{ other_user.facebook }}
+	<br>
+	Twitter: {{ other_user.twitter }}
+	<br>
+	Created_Quests: {{ other_user.created_quests }}
+	<br>
+	Completed_Quests: {{ other_user.completed_quests }}
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

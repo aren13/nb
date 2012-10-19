@@ -23,27 +23,27 @@ $(this).animate({left:'-85px'}, {queue:false, duration: 500});
     <div id="slidecontent">
         <ul>
             <div class="title">sıra</div>
-            <div class="stat icon-medal">1</div>
+            <div class="stat icon-medal">{{ user.rank }}</div>
         </ul>
         <ul>
             <div class="title">puan</div>
-            <div class="stat icon-star">0</div>
+            <div class="stat icon-star">{{ user.point }}</div>
         </ul>
         <ul>
             <div class="title">şehir</div>
-            <div class="stat icon-globe">0</div>
+            <div class="stat icon-globe"> {{ user.town }}</div>
         </ul>
         <ul>
             <div class="title">tamamlanan</div>
-            <div class="stat icon-map">0</div>
+            <div class="stat icon-map"> ??? </div>
         </ul>
 
     </div>
     <div id="clickme">
-       <img alt="1066_thumb" class="avatar" src="http://s3.amazonaws.com/rambler-production/avatars/1066_thumb.jpg?1344695910" />
+       <img alt="{{user.id}}" class="avatar" src="{{MEDIA_URL}}{{ user.image }}"/>
         <ul>
-            <div class="name">Enis</div>
-            <div class="surname">Güngör</div>
+            <div class="name">{{user.name }}</div>
+            <div class="surname">{{user.surname }}</div>
         </ul>
 
     </div>

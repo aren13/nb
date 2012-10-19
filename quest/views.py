@@ -4,16 +4,17 @@ from django.contrib.auth.models import User
 from django.http import  HttpResponseRedirect
 from django.core.urlresolvers import reverse
 ##
-from nb.website.views import r2r
-from nb.quest.forms import *
-
+from website.views import r2r
+from forms import *
+from account.models import UserProfile
 
 
 def quest_list(request):
+	userProf = UserProfile.objects.get(user=request.user)
 	quest_list_notApproved = Quest.objects.filter(status = 0)
 	quest_list = Quest.objects.filter(status = 1)
 	quest_list_all = Quest.objects.all()
-	return r2r(request, 'quest/list.html', {"quest_list":quest_list , "quest_list_notApproved":quest_list_notApproved ,"quest_list_all":quest_list_all })
+	return r2r(request, 'quest/list.html', {"user":userProf ,"quest_list":quest_list , "quest_list_notApproved":quest_list_notApproved ,"quest_list_all":quest_list_all })
 
 
 @login_required
@@ -36,15 +37,18 @@ def quest_add(request):
 #		other_user.quests.add(quest)
 #		return HttpResponseRedirect(reverse('quest_list', args=(reg_no,)))
 		return HttpResponseRedirect(reverse('quest_list'))
-	return r2r(request, 'quest/add.html', {'photo_form': photo_form , 'quest_form': quest_form , "userProf":userProf })
+	return r2r(request, 'quest/add.html', {'photo_form': photo_form , 'quest_form': quest_form , "user":userProf })
 
-def quest(request , id=None):
-#	if id == None;
-#	else:
-	return r2r(request, 'quest/quest.html', {})
+def quest(request , id):
+	user = request.user
+	userProf = UserProfile.objects.get(user=user)
+	quest= Quest.objects.get(id=id)
+	return r2r(request, 'quest/quest.html', {"user":userProf , "quest":quest})
 
-@login_required
+
+@login_required()
 def leaderboard(request):
 #	user_list = User.objects.all().order_by('rank')
-	user_list = User.objects.all()
-	return r2r(request, 'quest/leaderboard.html', {"users":user_list})	
+	user_list = UserProfile.objects.all().order_by('rank')
+	userProf = UserProfile.objects.get(user=request.user)
+	return r2r(request, 'quest/leaderboard.html', {"users":user_list , "user":userProf})
