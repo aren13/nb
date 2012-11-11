@@ -2,18 +2,21 @@
 {% block content %}
 		<br/>
 	{% for q in quest_list_all %}
-		<div class= "quest">
+
+		<div class= "quest-list-item">
 			<a href="/maceralar/{{ q.id }}/">
-			<img alt="{{other_user.id}}" class="avatar" src="{{MEDIA_URL}}{{ q.photo }}"  width="256" height="256"/>
+			<img alt="{{other_user.id}}" class="avatar" src="{{MEDIA_URL}}{{ q.photo }}"  width="300" height="200"/>
 			</a>
-			<br>
-			{{ q.title }}
-			<br>
-			{{ q.description }}
-			<br>
-			{{ q.date }}
-			<br><br><br>
+            <div class="quest-list-item-info">
+                <div class="title">
+	            <a href="/maceralar/{{ q.id }}/">
+		            {{ q.title }}
+	            </a>
+                </div>
+                <div class="tags">
+                    {{ q.date }}
+                </div>
+            </div>
 		</div>
-		<br/>	
 	{% endfor %}
 {% endblock %}

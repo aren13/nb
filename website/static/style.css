@@ -74,6 +74,244 @@ img {
 }
 
 
+/* Quest List
+------------------------------------------------------------------------------*/
+
+.quest-list-item{ //quest-list-item
+width:300px;
+    height:200px;
+    float:left;
+    margin:0 5px 15px 5px;
+    position:relative
+}
+
+.quest-list-item-info {
+    width: 280px;
+    min-height: 65px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.65);
+    color: #FFF;
+}
+
+.quest-list-item .tags {
+    padding: 0 30px 0 0;
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    opacity: 1;
+}
+
+.quest-list-item-info a, .quest-list-item-info a:visited {
+    color: #FFF;
+    clear: both;
+    font-size: 17px;
+    margin-bottom: 5px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #000;
+}
+
+/* Quest Page
+------------------------------------------------------------------------------*/
+
+.quest-photo-header {
+    width: 933px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quest-photo-header .title {
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    font-size: 25px;
+    line-height: normal;
+    width: 40%;
+    position: absolute;
+    left: 20px;
+    bottom: 35px;
+    padding: 15px;
+}
+
+.quest-photo-header .author {
+    position: absolute;
+    left: 20px;
+    bottom: 14px;
+}
+
+.tabs{
+    border-color:#ddd;
+    border-style:solid;
+    border-width:0 0 1px
+}
+
+.tabs,.pills{
+    margin:0 0 18px;
+    padding:0;
+    list-style:none;zoom:1
+}
+
+.tabs:before,.pills:before,.tabs:after,.pills:after{
+    display:table;
+    content:"";
+    zoom:1}
+
+.tabs:after,.pills:after{
+    clear:both
+}
+
+.tabs>li,.pills>li{
+    float:left
+}
+
+.tabs>li>a,.pills>li>a{
+    display:block
+}
+
+.tabs>li{
+    position:relative;
+    margin-bottom:-1px
+}
+
+.tabs>li>a{
+    padding:0 15px;
+    margin-right:2px;
+    line-height:34px;
+    border:1px solid transparent;
+    -webkit-border-radius:4px 4px 0 0;
+    -moz-border-radius:4px 4px 0 0;
+    border-radius:4px 4px 0 0
+}
+
+.tabs>li>a:hover{
+    text-decoration:none;
+    background-color:#eee;
+    border-color:#eee #eee #ddd
+}
+
+.tabs .active>a,.tabs .active>a:hover{
+    color:#808080;
+    background-color:#ffffff;
+    border:1px solid #ddd;
+    border-bottom-color:transparent;
+    cursor:default
+}
+
+.tabs .menu-dropdown,.tabs .dropdown-menu{
+    top:35px;border-width:1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px
+}
+
+.tabs a.menu:after,.tabs .dropdown-toggle:after{
+    border-top-color:#999;
+    margin-top:15px;margin-left:5px
+}
+
+.tabs li.open.menu .menu,.tabs .open.dropdown .dropdown-toggle{
+    border-color:#999
+}
+
+.tabs li.open a.menu:after,.tabs .dropdown.open .dropdown-toggle:after{
+    border-top-color:#555
+}
+
+#quest-tabs {
+    margin-top: 20px;
+    color: #194b72;
+    margin-bottom: 0;
+}
+
+#quest-tabs .complete{
+    float:right
+}
+
+#quest-tabs .complete.status{
+    padding:8px 5px;
+    font-weight:bold;
+    color:#ED1355
+}
+
+#quest-tabs .complete a{
+    font-weight:bold
+}
+
+#quest-tabs .count{
+    background:#ed1355;-webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;color:#FFF;
+    line-height:normal;
+    font-size:9px;
+    padding:3px 8px 3px 8px;
+    margin:7px 0 0 5px
+}
+
+.tab-content {
+    background: #FFF;
+    border-left: #999 solid 1px;
+    border-right: #999 solid 1px;
+    border-bottom: #999 solid 1px;
+    padding: 25px 20px;
+    overflow: auto;
+    width: 897px;
+}
+
+
+#quest-info {
+    margin-top: 25px;
+    min-width: 0;
+}
+
+.container-fluid {
+    position: relative;
+    min-width: 940px;
+    padding-left: 20px;
+    padding-right: 20px;
+    zoom: 1;
+}
+
+.container-fluid::before, .container-fluid::after {
+    display: table;
+    content: "";
+    zoom: 1;
+}
+
+.container-fluid::after {
+    clear: both;
+}
+
+.container-fluid > .sidebar {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 220px;
+}
+
+.well {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    padding: 19px;
+    min-height: 20px;
+    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.05);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+#quest-info .well {
+    background: url("/assets/bg-stats-bar.png") repeat scroll 0 0 #e5e5e5;
+    padding: 19px 19px 10px 19px;
+}
+
+
 /* Sidebar Left
 -----------------------------------------------------------------------------*/
 #sideLeft {
@@ -105,8 +343,6 @@ img {
     font-size: 30px;
     padding: 0 12px 0 12px
 }
-
-
 
 #slideout {
     background:#DEFFAE;

@@ -40,10 +40,13 @@ $(this).animate({left:'-85px'}, {queue:false, duration: 500});
 
     </div>
     <div id="clickme">
+	    <a href="/user/{{ user.id }}/profile/">
        <img alt="{{user.id}}" class="avatar" src="{{MEDIA_URL}}{{ user.image }}"/>
+	    </a>
         <ul>
-            <div class="name">{{user.name }}</div>
-            <div class="surname">{{user.surname }}</div>
+	        <a href="/user/{{ user.id }}/profile/">
+            <div class="name">{{user.name }} {{user.surname }}</div>
+	        </a>
         </ul>
 
     </div>

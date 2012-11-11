@@ -2,24 +2,63 @@
 
 {% block content %}
 
-
-	<div id="quest-photo">
-		<h3>Orjinal Macera </h3>
+<div id="quest-photo">
+	<div class="quest-photo-header">
 		<img src="{{ MEDIA_URL }}{{ quest.photo }}" alt=" {{ quest.id }}" />
+        <div id="quest-title" class="title">
+	        {{ quest.title }}
 
-		<h4> Tamamlanan Maceralar</h4>
-		{% for q in completed_quests %}
-			<div>
-				Tamamlayan : {{ q.competitor }}
-				<img src="{{ MEDIA_URL }}{{ q.photo }}" alt=" {{ q.id }}" />
-			</div>
-			<br>
-		{% endfor %}
+        </div>
 
-	<a href="{% url quest_complete quest.id  %}"> Macerayı Tamamlak için tıkla </a>
+		<div class="author">
+            <span class="label label-inverse">Original</span>
+		</div>
+
+	</div>
+</div>
+
+	<ul id="quest-tabs" class="tabs">
+		<li class="active"><a href="#activity">Info &amp; Activity</a></li>
+		<li class=""><a href="#completed">Completed <span class="count">1</span></a></li>
+	</ul>
+
+	<div id="tab-content">
+
+        <div id="activity" class="active">
+	        <h3 align="center"> {{ quest.description }} </h3>
+	        <div id="quest-info" class="container-fluid">
+                <div class="sidebar">
+                    <div id="author_well" class="well">
+                        {{ quest.creator }}
+                    </div>
+
+                </div>
+
+		        <div class="content">
+
+
+		        </div>
+	        </div>
+        </div>
+
+		<div id="completed">
+
+		</div>
+
 	</div>
 
-	<div id="quest-info">
+
+	<br/><br/><br/><br/>
+	<h4> Tamamlanan Maceralar</h4>
+	{% for q in completed_quests %}
+		<div>
+			Tamamlayan : {{ q.competitor }}
+			<img src="{{ MEDIA_URL }}{{ q.photo }}" alt=" {{ q.id }}" />
+		</div>
+		<br>
+	{% endfor %}
+	<a href="{% url quest_complete quest.id  %}"> Macerayı Tamamlak için tıkla </a>
+	<div id="quest-infos">
 
 		<br>
 		Title : {{ quest.title }}
